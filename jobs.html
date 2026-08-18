@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Guna Career Hub Jobs - Government, Private, IT and Remote Job Opportunities.">
 
 <title>Jobs | Guna Career Hub</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -17,8 +22,10 @@
 body{
     background:#f4f7fb;
     color:#222;
-    padding-bottom:70px;
+    padding-bottom:75px;
 }
+
+/* HEADER */
 
 header{
     background:linear-gradient(135deg,#123c8c,#1976d2);
@@ -35,6 +42,8 @@ header h1{
 header p{
     font-size:15px;
 }
+
+/* NAVIGATION */
 
 .navbar{
     display:flex;
@@ -54,6 +63,8 @@ header p{
     background:#1976d2;
 }
 
+/* PAGE TITLE */
+
 .page-title{
     text-align:center;
     padding:35px 15px 15px;
@@ -61,58 +72,167 @@ header p{
 
 .page-title h2{
     color:#123c8c;
-    font-size:28px;
+    font-size:29px;
 }
 
 .page-title p{
-    margin-top:10px;
     color:#666;
+    margin-top:8px;
 }
 
-.container{
+/* SEARCH */
+
+.search-section{
     max-width:1000px;
+    margin:15px auto;
+    padding:15px;
+}
+
+.search-box{
+    background:white;
+    padding:18px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.search-box input,
+.search-box select{
+    width:100%;
+    padding:12px;
+    margin:6px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.search-button{
+    width:100%;
+    padding:12px;
+    margin-top:8px;
+    border:none;
+    border-radius:25px;
+    background:#123c8c;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.search-button:hover{
+    background:#1976d2;
+}
+
+/* JOB CARDS */
+
+.jobs-container{
+    max-width:1100px;
     margin:auto;
     padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
 }
 
 .job-card{
     background:white;
     padding:22px;
-    margin-bottom:18px;
-    border-radius:16px;
-    box-shadow:0 5px 15px rgba(0,0,0,.10);
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.11);
+    border:1px solid #e5e7eb;
+}
+
+.job-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.16);
+}
+
+.job-icon{
+    font-size:40px;
+    margin-bottom:10px;
 }
 
 .job-card h3{
     color:#123c8c;
+    margin-bottom:8px;
+}
+
+.company{
+    color:#555;
+    font-weight:bold;
     margin-bottom:10px;
 }
 
-.job-card p{
-    color:#555;
-    line-height:1.6;
-    margin-bottom:8px;
+.job-info{
+    color:#666;
+    line-height:1.7;
+    font-size:14px;
 }
 
 .tag{
     display:inline-block;
-    background:#e3f2fd;
-    color:#0757c9;
-    padding:6px 10px;
+    margin:12px 5px 10px 0;
+    padding:6px 12px;
     border-radius:15px;
-    font-size:13px;
-    margin:4px 3px 10px 0;
+    background:#e3f2fd;
+    color:#123c8c;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.apply{
-    display:inline-block;
+.apply-button{
+    display:block;
+    text-align:center;
+    margin-top:12px;
+    padding:11px;
+    border-radius:24px;
     background:#123c8c;
     color:white;
     text-decoration:none;
-    padding:10px 18px;
-    border-radius:22px;
-    margin-top:8px;
+    font-weight:bold;
 }
+
+.apply-button:hover{
+    background:#1976d2;
+}
+
+/* NO RESULTS */
+
+.no-results{
+    display:none;
+    text-align:center;
+    background:white;
+    padding:30px;
+    margin:20px;
+    border-radius:15px;
+    color:#666;
+}
+
+/* INFO */
+
+.info{
+    max-width:1000px;
+    margin:20px auto;
+    padding:20px;
+}
+
+.info-box{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+}
+
+.info-box h2{
+    color:#123c8c;
+    margin-bottom:10px;
+}
+
+.info-box p{
+    color:#555;
+    line-height:1.6;
+}
+
+/* FOOTER */
 
 footer{
     background:#111;
@@ -121,6 +241,8 @@ footer{
     padding:25px 15px;
     margin-top:30px;
 }
+
+/* BOTTOM NAV */
 
 .bottom-nav{
     position:fixed;
@@ -132,6 +254,7 @@ footer{
     background:#123c8c;
     padding:10px 5px;
     z-index:1000;
+    box-shadow:0 -3px 10px rgba(0,0,0,.2);
 }
 
 .bottom-nav a{
@@ -147,6 +270,8 @@ footer{
     margin-bottom:3px;
 }
 
+/* MOBILE */
+
 @media(max-width:600px){
 
     .navbar{
@@ -157,138 +282,608 @@ footer{
         font-size:25px;
     }
 
-    .container{
+    .jobs-container{
+        grid-template-columns:1fr;
         padding:15px;
     }
 
-    .job-card{
-        padding:18px;
-    }
 }
+
 </style>
+
 </head>
 
 <body>
 
+
 <header>
+
     <h1>💼 Guna Career Hub</h1>
-    <p>Find Your Next Opportunity</p>
+
+    <p>
+        Find Jobs • Build Skills • Grow Your Career
+    </p>
+
 </header>
 
+
 <nav class="navbar">
+
     <a href="index.html">Home</a>
+
     <a href="jobs.html">Jobs</a>
+
     <a href="courses.html">Courses</a>
+
     <a href="exams.html">Exams</a>
+
     <a href="resume.html">Resume</a>
+
     <a href="quiz.html">Quiz</a>
+
+    <a href="tools.html">Tools</a>
+
 </nav>
 
+
 <section class="page-title">
-    <h2>💼 Latest Job Opportunities</h2>
-    <p>Explore different career opportunities.</p>
+
+    <h2>💼 Find Your Next Job</h2>
+
+    <p>
+        Explore government, private, IT and remote opportunities.
+    </p>
+
 </section>
 
-<div class="container">
 
-    <div class="job-card">
-        <h3>📊 Business Analyst</h3>
+<!-- SEARCH -->
 
-        <span class="tag">Data Analysis</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Excel</span>
+<section class="search-section">
 
-        <p>
-            Learn about business analyst opportunities,
-            data analysis and reporting roles.
-        </p>
+    <div class="search-box">
 
-        <p><strong>Skills:</strong> SQL, Excel, Data Analysis</p>
+        <input
+            type="text"
+            id="jobSearch"
+            placeholder="🔎 Search job title or skill..."
+        >
 
-        <a href="#" class="apply">View Opportunity →</a>
+        <select id="jobType">
+
+            <option value="all">
+                All Job Types
+            </option>
+
+            <option value="government">
+                Government
+            </option>
+
+            <option value="private">
+                Private
+            </option>
+
+            <option value="remote">
+                Remote
+            </option>
+
+            <option value="it">
+                IT
+            </option>
+
+        </select>
+
+
+        <select id="jobLocation">
+
+            <option value="all">
+                All Locations
+            </option>
+
+            <option value="chennai">
+                Chennai
+            </option>
+
+            <option value="bangalore">
+                Bangalore
+            </option>
+
+            <option value="delhi">
+                Delhi
+            </option>
+
+            <option value="remote">
+                Remote
+            </option>
+
+        </select>
+
+
+        <button
+            class="search-button"
+            onclick="filterJobs()">
+
+            🔎 Search Jobs
+
+        </button>
+
     </div>
 
-    <div class="job-card">
-        <h3>💻 Web Developer</h3>
+</section>
 
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
 
-        <p>
-            Explore opportunities for beginners and
-            experienced web developers.
-        </p>
+<!-- JOBS -->
 
-        <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+<div class="jobs-container" id="jobsContainer">
 
-        <a href="#" class="apply">View Opportunity →</a>
+
+    <!-- JOB 1 -->
+
+    <div class="job-card"
+         data-type="government"
+         data-location="chennai"
+         data-search="government tnpsc assistant">
+
+        <div class="job-icon">🏛️</div>
+
+        <h3>Government Assistant</h3>
+
+        <div class="company">
+            Tamil Nadu Government
+        </div>
+
+        <div class="job-info">
+
+            📍 Chennai<br>
+
+            💰 Salary: ₹25,000 – ₹40,000<br>
+
+            🎓 Qualification: Degree
+
+        </div>
+
+        <span class="tag">
+            Government
+        </span>
+
+        <span class="tag">
+            Full Time
+        </span>
+
+        <a href="exams.html"
+           class="apply-button">
+
+            View Details →
+
+        </a>
+
     </div>
 
-    <div class="job-card">
-        <h3>🤖 AI & Data Analyst</h3>
 
-        <span class="tag">AI</span>
-        <span class="tag">Python</span>
-        <span class="tag">Data</span>
+    <!-- JOB 2 -->
 
-        <p>
-            Explore careers related to artificial
-            intelligence and data analytics.
-        </p>
+    <div class="job-card"
+         data-type="private"
+         data-location="chennai"
+         data-search="business analyst data analyst excel sql">
 
-        <p><strong>Skills:</strong> AI, Python, Data Analytics</p>
+        <div class="job-icon">📊</div>
 
-        <a href="#" class="apply">View Opportunity →</a>
+        <h3>Junior Business Analyst</h3>
+
+        <div class="company">
+            Private Company
+        </div>
+
+        <div class="job-info">
+
+            📍 Chennai<br>
+
+            💰 Salary: ₹30,000 – ₹50,000<br>
+
+            🎓 Qualification: Degree
+
+        </div>
+
+        <span class="tag">
+            Private
+        </span>
+
+        <span class="tag">
+            Data
+        </span>
+
+        <a href="#"
+           class="apply-button"
+           onclick="showMessage(event)">
+
+            Apply Now →
+
+        </a>
+
     </div>
 
-    <div class="job-card">
-        <h3>🏠 Remote Jobs</h3>
 
-        <span class="tag">Remote</span>
-        <span class="tag">Work From Home</span>
+    <!-- JOB 3 -->
 
-        <p>
-            Discover remote and work-from-home career
-            opportunities.
-        </p>
+    <div class="job-card"
+         data-type="remote"
+         data-location="remote"
+         data-search="content writer writing remote">
 
-        <p><strong>Suitable for:</strong> Students and professionals</p>
+        <div class="job-icon">✍️</div>
 
-        <a href="#" class="apply">Explore Jobs →</a>
+        <h3>Remote Content Writer</h3>
+
+        <div class="company">
+            Digital Media Company
+        </div>
+
+        <div class="job-info">
+
+            📍 Remote<br>
+
+            💰 Salary: ₹20,000 – ₹35,000<br>
+
+            🎓 Qualification: Any Degree
+
+        </div>
+
+        <span class="tag">
+            Remote
+        </span>
+
+        <span class="tag">
+            Writing
+        </span>
+
+        <a href="#"
+           class="apply-button"
+           onclick="showMessage(event)">
+
+            Apply Now →
+
+        </a>
+
     </div>
+
+
+    <!-- JOB 4 -->
+
+    <div class="job-card"
+         data-type="it"
+         data-location="bangalore"
+         data-search="web developer html css javascript">
+
+        <div class="job-icon">💻</div>
+
+        <h3>Junior Web Developer</h3>
+
+        <div class="company">
+            IT Company
+        </div>
+
+        <div class="job-info">
+
+            📍 Bangalore<br>
+
+            💰 Salary: ₹25,000 – ₹45,000<br>
+
+            🎓 Qualification: Degree / Diploma
+
+        </div>
+
+        <span class="tag">
+            IT
+        </span>
+
+        <span class="tag">
+            Web Development
+        </span>
+
+        <a href="#"
+           class="apply-button"
+           onclick="showMessage(event)">
+
+            Apply Now →
+
+        </a>
+
+    </div>
+
+
+    <!-- JOB 5 -->
+
+    <div class="job-card"
+         data-type="private"
+         data-location="delhi"
+         data-search="customer support executive communication">
+
+        <div class="job-icon">🎧</div>
+
+        <h3>Customer Support Executive</h3>
+
+        <div class="company">
+            Service Company
+        </div>
+
+        <div class="job-info">
+
+            📍 Delhi<br>
+
+            💰 Salary: ₹20,000 – ₹30,000<br>
+
+            🎓 Qualification: Any Degree
+
+        </div>
+
+        <span class="tag">
+            Private
+        </span>
+
+        <span class="tag">
+            Customer Support
+        </span>
+
+        <a href="#"
+           class="apply-button"
+           onclick="showMessage(event)">
+
+            Apply Now →
+
+        </a>
+
+    </div>
+
+
+    <!-- JOB 6 -->
+
+    <div class="job-card"
+         data-type="remote"
+         data-location="remote"
+         data-search="data entry excel remote">
+
+        <div class="job-icon">⌨️</div>
+
+        <h3>Remote Data Entry Executive</h3>
+
+        <div class="company">
+            Online Services Company
+        </div>
+
+        <div class="job-info">
+
+            📍 Remote<br>
+
+            💰 Salary: ₹15,000 – ₹25,000<br>
+
+            🎓 Qualification: Any Degree
+
+        </div>
+
+        <span class="tag">
+            Remote
+        </span>
+
+        <span class="tag">
+            Data Entry
+        </span>
+
+        <a href="#"
+           class="apply-button"
+           onclick="showMessage(event)">
+
+            Apply Now →
+
+        </a>
+
+    </div>
+
 
 </div>
 
+
+<div class="no-results" id="noResults">
+
+    ❌ No matching jobs found.
+
+    <br><br>
+
+    Try another keyword or job category.
+
+</div>
+
+
+<!-- INFORMATION -->
+
+<section class="info">
+
+    <div class="info-box">
+
+        <h2>🚀 Build Your Career</h2>
+
+        <p>
+
+            Use Guna Career Hub to explore job opportunities,
+            improve your skills, prepare for examinations and
+            create a professional resume.
+
+        </p>
+
+    </div>
+
+</section>
+
+
 <footer>
+
     <h3>💼 Guna Career Hub</h3>
-    <p>Learn • Prepare • Apply • Grow</p>
-    <p>© 2026 Guna Career Hub</p>
+
+    <p>
+        Learn • Prepare • Apply • Grow
+    </p>
+
+    <p>
+        © 2026 Guna Career Hub
+    </p>
+
 </footer>
+
 
 <div class="bottom-nav">
 
     <a href="index.html">
+
         <span>🏠</span>
+
         Home
+
     </a>
+
 
     <a href="jobs.html">
+
         <span>💼</span>
+
         Jobs
+
     </a>
+
 
     <a href="resume.html">
+
         <span>📄</span>
+
         Resume
+
     </a>
 
+
     <a href="courses.html">
+
         <span>📚</span>
+
         Courses
+
+    </a>
+
+
+    <a href="tools.html">
+
+        <span>🧮</span>
+
+        Tools
+
     </a>
 
 </div>
+
+
+<script>
+
+/* =========================
+   JOB SEARCH
+========================= */
+
+function filterJobs(){
+
+    const search =
+        document.getElementById("jobSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const type =
+        document.getElementById("jobType").value;
+
+    const location =
+        document.getElementById("jobLocation").value;
+
+    const jobs =
+        document.querySelectorAll(".job-card");
+
+    let found = 0;
+
+
+    jobs.forEach(function(job){
+
+        const jobSearch =
+            job.dataset.search.toLowerCase();
+
+        const jobType =
+            job.dataset.type;
+
+        const jobLocation =
+            job.dataset.location;
+
+
+        const matchesSearch =
+            search === "" ||
+            jobSearch.includes(search);
+
+        const matchesType =
+            type === "all" ||
+            jobType === type;
+
+        const matchesLocation =
+            location === "all" ||
+            jobLocation === location;
+
+
+        if(
+            matchesSearch &&
+            matchesType &&
+            matchesLocation
+        ){
+
+            job.style.display="block";
+
+            found++;
+
+        }
+        else{
+
+            job.style.display="none";
+
+        }
+
+    });
+
+
+    const noResults =
+        document.getElementById("noResults");
+
+
+    if(found === 0){
+
+        noResults.style.display="block";
+
+    }
+    else{
+
+        noResults.style.display="none";
+
+    }
+
+}
+
+
+/* =========================
+   APPLY MESSAGE
+========================= */
+
+function showMessage(event){
+
+    event.preventDefault();
+
+    alert(
+        "Application link will be added when the actual job opening is published."
+    );
+
+}
+
+</script>
+
 
 </body>
 </html>
