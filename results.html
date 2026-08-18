@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Results | Guna Media Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* Header */
+header{
+    background:#1565c0;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header p{
+    margin:8px 0 0;
+    font-size:16px;
+}
+
+/* Navigation */
+nav{
+    background:#0d47a1;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 8px;
+    font-size:15px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* Main Container */
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+/* Page Title */
+.page-title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.page-title h2{
+    color:#1565c0;
+    font-size:28px;
+}
+
+.page-title p{
+    color:#666;
+}
+
+/* Result Cards */
+.result-card{
+    background:white;
+    padding:22px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.10);
+}
+
+.result-card h3{
+    margin-top:0;
+    color:#1565c0;
+}
+
+.result-card p{
+    line-height:1.6;
+}
+
+/* Button */
+.result-button{
+    display:inline-block;
+    background:#1565c0;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    margin-top:8px;
+}
+
+.result-button:hover{
+    background:#0d47a1;
+}
+
+/* Search Box */
+.search-box{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:25px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.search-box input{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+/* Footer */
+footer{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:25px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Guna Media Hub</h1>
+    <p>Latest Results & Updates</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="sports.html">Sports</a>
+    <a href="education.html">Education</a>
+    <a href="exams.html">Exams</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="results.html">Results</a>
+</nav>
+
+<div class="container">
+
+    <div class="page-title">
+        <h2>Latest Results</h2>
+        <p>Check the latest examination results and updates</p>
+    </div>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search results..."
+            onkeyup="searchResults()"
+        >
+    </div>
+
+    <div id="resultsList">
+
+        <div class="result-card">
+            <h3>Government Exam Results</h3>
+            <p>
+                Check the latest government examination results,
+                selection lists and result announcements.
+            </p>
+            <a href="#" class="result-button">View Result</a>
+        </div>
+
+        <div class="result-card">
+            <h3>TNPSC Examination Results</h3>
+            <p>
+                Latest TNPSC examination results and important
+                result updates will be published here.
+            </p>
+            <a href="#" class="result-button">View Result</a>
+        </div>
+
+        <div class="result-card">
+            <h3>School Examination Results</h3>
+            <p>
+                Find school examination results including
+                Class 10 and Class 12 results.
+            </p>
+            <a href="#" class="result-button">View Result</a>
+        </div>
+
+        <div class="result-card">
+            <h3>College & University Results</h3>
+            <p>
+                Check college and university examination results
+                and latest academic announcements.
+            </p>
+            <a href="#" class="result-button">View Result</a>
+        </div>
+
+        <div class="result-card">
+            <h3>Entrance Examination Results</h3>
+            <p>
+                Latest entrance examination results and
+                admission-related updates.
+            </p>
+            <a href="#" class="result-button">View Result</a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Guna Media Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+function searchResults(){
+
+    let input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".result-card");
+
+    cards.forEach(function(card){
+
+        let text =
+            card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            card.style.display = "block";
+        }
+        else{
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
