@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz | Guna Media Hub</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* Header */
+header{
+    background:#1565c0;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header p{
+    margin:8px 0 0;
+    font-size:16px;
+}
+
+/* Navigation */
+nav{
+    background:#0d47a1;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:15px;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* Main */
+.container{
+    max-width:800px;
+    margin:30px auto;
+    padding:20px;
+}
+
+/* Quiz Card */
+.quiz-card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.10);
+}
+
+.quiz-card h2{
+    color:#1565c0;
+    margin-top:0;
+}
+
+.question{
+    font-size:19px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.option{
+    display:block;
+    background:#f1f5f9;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    cursor:pointer;
+    border:1px solid #ddd;
+}
+
+.option:hover{
+    background:#e3f2fd;
+}
+
+.option input{
+    margin-right:10px;
+}
+
+button{
+    display:block;
+    margin:25px auto;
+    background:#1565c0;
+    color:white;
+    border:none;
+    padding:13px 30px;
+    border-radius:25px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0d47a1;
+}
+
+#result{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    color:#1565c0;
+    margin-top:20px;
+}
+
+/* Footer */
+footer{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Guna Media Hub</h1>
+    <p>Quiz Corner</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="sports.html">Sports</a>
+    <a href="education.html">Education</a>
+    <a href="exams.html">Exams</a>
+    <a href="quiz.html">Quiz</a>
+</nav>
+
+<div class="container">
+
+    <div class="quiz-card">
+        <h2>General Knowledge Quiz</h2>
+
+        <div class="question">
+            1. What is the capital of India?
+        </div>
+
+        <label class="option">
+            <input type="radio" name="q1" value="wrong">
+            Mumbai
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="correct">
+            New Delhi
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="wrong">
+            Chennai
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q1" value="wrong">
+            Kolkata
+        </label>
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="question">
+            2. Which planet is known as the Red Planet?
+        </div>
+
+        <label class="option">
+            <input type="radio" name="q2" value="wrong">
+            Earth
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q2" value="correct">
+            Mars
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q2" value="wrong">
+            Jupiter
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q2" value="wrong">
+            Venus
+        </label>
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="question">
+            3. Who is known as the Father of the Indian Constitution?
+        </div>
+
+        <label class="option">
+            <input type="radio" name="q3" value="correct">
+            Dr. B. R. Ambedkar
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q3" value="wrong">
+            Mahatma Gandhi
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q3" value="wrong">
+            Jawaharlal Nehru
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q3" value="wrong">
+            Sardar Patel
+        </label>
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="question">
+            4. How many days are there in a leap year?
+        </div>
+
+        <label class="option">
+            <input type="radio" name="q4" value="wrong">
+            365
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q4" value="correct">
+            366
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q4" value="wrong">
+            364
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q4" value="wrong">
+            360
+        </label>
+    </div>
+
+
+    <div class="quiz-card">
+
+        <div class="question">
+            5. Which is the largest ocean in the world?
+        </div>
+
+        <label class="option">
+            <input type="radio" name="q5" value="wrong">
+            Indian Ocean
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q5" value="wrong">
+            Atlantic Ocean
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q5" value="correct">
+            Pacific Ocean
+        </label>
+
+        <label class="option">
+            <input type="radio" name="q5" value="wrong">
+            Arctic Ocean
+        </label>
+    </div>
+
+    <button onclick="checkQuiz()">Submit Quiz</button>
+
+    <div id="result"></div>
+
+</div>
+
+<footer>
+    <p>© 2026 Guna Media Hub. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+
+function checkQuiz(){
+
+    let score = 0;
+
+    let questions = ["q1","q2","q3","q4","q5"];
+
+    questions.forEach(function(question){
+
+        let answer = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if(answer && answer.value === "correct"){
+            score++;
+        }
+
+    });
+
+    document.getElementById("result").innerHTML =
+        "Your Score: " + score + " / 5";
+
+}
+
+</script>
+
+</body>
+</html>
