@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Career Tools | Guna Career Hub</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+    padding-bottom:75px;
+}
+
+header{
+    background:linear-gradient(135deg,#123c8c,#1976d2);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:15px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    background:#0b2d6b;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    padding:13px 12px;
+    font-size:14px;
+}
+
+.navbar a:hover{
+    background:#1976d2;
+}
+
+.page-title{
+    text-align:center;
+    padding:35px 15px 15px;
+}
+
+.page-title h2{
+    color:#123c8c;
+    font-size:28px;
+}
+
+.page-title p{
+    margin-top:10px;
+    color:#666;
+}
+
+.tools-container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.tool-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.tool-card h3{
+    color:#123c8c;
+    margin-bottom:10px;
+}
+
+.tool-card p{
+    color:#666;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:12px;
+    margin-bottom:5px;
+}
+
+input{
+    width:100%;
+    padding:11px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:22px;
+    background:#123c8c;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1976d2;
+}
+
+.result{
+    margin-top:15px;
+    padding:12px;
+    border-radius:8px;
+    background:#e3f2fd;
+    color:#123c8c;
+    font-weight:bold;
+    text-align:center;
+    min-height:20px;
+}
+
+.info{
+    max-width:1000px;
+    margin:10px auto 30px;
+    padding:20px;
+}
+
+.info-box{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+}
+
+.info-box h2{
+    color:#123c8c;
+    margin-bottom:10px;
+}
+
+.info-box p{
+    color:#555;
+    line-height:1.6;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:30px;
+}
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-around;
+    background:#123c8c;
+    padding:10px 5px;
+    z-index:1000;
+    box-shadow:0 -3px 10px rgba(0,0,0,.2);
+}
+
+.bottom-nav a{
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    font-size:12px;
+}
+
+.bottom-nav span{
+    display:block;
+    font-size:20px;
+    margin-bottom:3px;
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        display:none;
+    }
+
+    header h1{
+        font-size:25px;
+    }
+
+    .tools-container{
+        grid-template-columns:1fr;
+        padding:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💼 Guna Career Hub</h1>
+    <p>Useful Tools for Students & Job Seekers</p>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="courses.html">Courses</a>
+    <a href="exams.html">Exams</a>
+    <a href="resume.html">Resume</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="tools.html">Tools</a>
+</nav>
+
+<section class="page-title">
+    <h2>🧮 Career Tools</h2>
+    <p>Useful calculators for education, career and salary planning.</p>
+</section>
+
+<div class="tools-container">
+
+    <!-- PERCENTAGE -->
+
+    <div class="tool-card">
+
+        <h3>📊 Percentage Calculator</h3>
+
+        <p>
+            Calculate your percentage from marks obtained.
+        </p>
+
+        <label>Marks Obtained</label>
+        <input type="number" id="marks" placeholder="Example: 450">
+
+        <label>Total Marks</label>
+        <input type="number" id="totalMarks" placeholder="Example: 500">
+
+        <button onclick="calculatePercentage()">
+            Calculate Percentage
+        </button>
+
+        <div class="result" id="percentageResult"></div>
+
+    </div>
+
+
+    <!-- CGPA -->
+
+    <div class="tool-card">
+
+        <h3>🎓 CGPA Calculator</h3>
+
+        <p>
+            Convert CGPA into an approximate percentage.
+        </p>
+
+        <label>Enter CGPA</label>
+        <input type="number" id="cgpa" step="0.01" placeholder="Example: 8.5">
+
+        <button onclick="calculateCGPA()">
+            Convert to Percentage
+        </button>
+
+        <div class="result" id="cgpaResult"></div>
+
+    </div>
+
+
+    <!-- AGE -->
+
+    <div class="tool-card">
+
+        <h3>🎂 Age Calculator</h3>
+
+        <p>
+            Calculate your age from your date of birth.
+        </p>
+
+        <label>Date of Birth</label>
+        <input type="date" id="dob">
+
+        <button onclick="calculateAge()">
+            Calculate Age
+        </button>
+
+        <div class="result" id="ageResult"></div>
+
+    </div>
+
+
+    <!-- SALARY -->
+
+    <div class="tool-card">
+
+        <h3>💰 Salary Calculator</h3>
+
+        <p>
+            Calculate approximate annual salary from monthly salary.
+        </p>
+
+        <label>Monthly Salary</label>
+        <input type="number" id="monthlySalary" placeholder="Example: 25000">
+
+        <button onclick="calculateSalary()">
+            Calculate Annual Salary
+        </button>
+
+        <div class="result" id="salaryResult"></div>
+
+    </div>
+
+</div>
+
+<section class="info">
+
+    <div class="info-box">
+
+        <h2>🌟 More Career Tools Coming Soon</h2>
+
+        <p>
+            Guna Career Hub can gradually add more useful tools,
+            including percentage calculators, study planners,
+            interview preparation tools, salary comparisons and
+            other career resources.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>💼 Guna Career Hub</h3>
+
+    <p>Learn • Prepare • Apply • Grow</p>
+
+    <p>© 2026 Guna Career Hub</p>
+
+</footer>
+
+<div class="bottom-nav">
+
+    <a href="index.html">
+        <span>🏠</span>
+        Home
+    </a>
+
+    <a href="jobs.html">
+        <span>💼</span>
+        Jobs
+    </a>
+
+    <a href="resume.html">
+        <span>📄</span>
+        Resume
+    </a>
+
+    <a href="courses.html">
+        <span>📚</span>
+        Courses
+    </a>
+
+</div>
+
+<script>
+
+/* PERCENTAGE */
+
+function calculatePercentage(){
+
+    let marks =
+        parseFloat(document.getElementById("marks").value);
+
+    let total =
+        parseFloat(document.getElementById("totalMarks").value);
+
+    if(isNaN(marks) || isNaN(total) || total <= 0){
+
+        document.getElementById("percentageResult").textContent =
+            "Please enter valid marks.";
+
+        return;
+    }
+
+    let percentage = (marks / total) * 100;
+
+    document.getElementById("percentageResult").textContent =
+        "Percentage: " + percentage.toFixed(2) + "%";
+}
+
+
+/* CGPA */
+
+function calculateCGPA(){
+
+    let cgpa =
+        parseFloat(document.getElementById("cgpa").value);
+
+    if(isNaN(cgpa) || cgpa < 0){
+
+        document.getElementById("cgpaResult").textContent =
+            "Please enter a valid CGPA.";
+
+        return;
+    }
+
+    let percentage = cgpa * 9.5;
+
+    document.getElementById("cgpaResult").textContent =
+        "Approx. Percentage: " + percentage.toFixed(2) + "%";
+}
+
+
+/* AGE */
+
+function calculateAge(){
+
+    let dobValue =
+        document.getElementById("dob").value;
+
+    if(!dobValue){
+
+        document.getElementById("ageResult").textContent =
+            "Please select your date of birth.";
+
+        return;
+    }
+
+    let dob = new Date(dobValue);
+    let today = new Date();
+
+    let age = today.getFullYear() - dob.getFullYear();
+
+    let monthDifference =
+        today.getMonth() - dob.getMonth();
+
+    if(
+        monthDifference < 0 ||
+        (
+            monthDifference === 0 &&
+            today.getDate() < dob.getDate()
+        )
+    ){
+
+        age--;
+    }
+
+    if(age < 0){
+
+        document.getElementById("ageResult").textContent =
+            "Please enter a valid date.";
+
+        return;
+    }
+
+    document.getElementById("ageResult").textContent =
+        "Your Age: " + age + " years";
+}
+
+
+/* SALARY */
+
+function calculateSalary(){
+
+    let monthly =
+        parseFloat(document.getElementById("monthlySalary").value);
+
+    if(isNaN(monthly) || monthly < 0){
+
+        document.getElementById("salaryResult").textContent =
+            "Please enter a valid salary.";
+
+        return;
+    }
+
+    let annual = monthly * 12;
+
+    document.getElementById("salaryResult").textContent =
+        "Approx. Annual Salary: ₹" +
+        annual.toLocaleString("en-IN");
+}
+
+</script>
+
+</body>
+</html>
