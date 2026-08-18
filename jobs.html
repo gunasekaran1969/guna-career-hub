@@ -139,6 +139,7 @@ header p{
     border-radius:18px;
     box-shadow:0 5px 15px rgba(0,0,0,.11);
     border:1px solid #e5e7eb;
+    transition:.25s;
 }
 
 .job-card:hover{
@@ -207,7 +208,7 @@ header p{
     color:#666;
 }
 
-/* INFO */
+/* INFORMATION */
 
 .info{
     max-width:1000px;
@@ -296,6 +297,8 @@ footer{
 <body>
 
 
+<!-- HEADER -->
+
 <header>
 
     <h1>💼 Guna Career Hub</h1>
@@ -307,24 +310,22 @@ footer{
 </header>
 
 
+<!-- NAVIGATION -->
+
 <nav class="navbar">
 
     <a href="index.html">Home</a>
-
     <a href="jobs.html">Jobs</a>
-
     <a href="courses.html">Courses</a>
-
     <a href="exams.html">Exams</a>
-
     <a href="resume.html">Resume</a>
-
     <a href="quiz.html">Quiz</a>
-
     <a href="tools.html">Tools</a>
 
 </nav>
 
+
+<!-- PAGE TITLE -->
 
 <section class="page-title">
 
@@ -351,53 +352,23 @@ footer{
 
         <select id="jobType">
 
-            <option value="all">
-                All Job Types
-            </option>
-
-            <option value="government">
-                Government
-            </option>
-
-            <option value="private">
-                Private
-            </option>
-
-            <option value="remote">
-                Remote
-            </option>
-
-            <option value="it">
-                IT
-            </option>
+            <option value="all">All Job Types</option>
+            <option value="government">Government</option>
+            <option value="private">Private</option>
+            <option value="remote">Remote</option>
+            <option value="it">IT</option>
 
         </select>
-
 
         <select id="jobLocation">
 
-            <option value="all">
-                All Locations
-            </option>
-
-            <option value="chennai">
-                Chennai
-            </option>
-
-            <option value="bangalore">
-                Bangalore
-            </option>
-
-            <option value="delhi">
-                Delhi
-            </option>
-
-            <option value="remote">
-                Remote
-            </option>
+            <option value="all">All Locations</option>
+            <option value="chennai">Chennai</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="delhi">Delhi</option>
+            <option value="remote">Remote</option>
 
         </select>
-
 
         <button
             class="search-button"
@@ -412,7 +383,7 @@ footer{
 </section>
 
 
-<!-- JOBS -->
+<!-- JOB LIST -->
 
 <div class="jobs-container" id="jobsContainer">
 
@@ -435,22 +406,15 @@ footer{
         <div class="job-info">
 
             📍 Chennai<br>
-
             💰 Salary: ₹25,000 – ₹40,000<br>
-
             🎓 Qualification: Degree
 
         </div>
 
-        <span class="tag">
-            Government
-        </span>
+        <span class="tag">Government</span>
+        <span class="tag">Full Time</span>
 
-        <span class="tag">
-            Full Time
-        </span>
-
-        <a href="exams.html"
+        <a href="job-details.html"
            class="apply-button">
 
             View Details →
@@ -478,26 +442,18 @@ footer{
         <div class="job-info">
 
             📍 Chennai<br>
-
             💰 Salary: ₹30,000 – ₹50,000<br>
-
             🎓 Qualification: Degree
 
         </div>
 
-        <span class="tag">
-            Private
-        </span>
+        <span class="tag">Private</span>
+        <span class="tag">Data</span>
 
-        <span class="tag">
-            Data
-        </span>
+        <a href="job-details.html"
+           class="apply-button">
 
-        <a href="#"
-           class="apply-button"
-           onclick="showMessage(event)">
-
-            Apply Now →
+            View Details →
 
         </a>
 
@@ -522,26 +478,18 @@ footer{
         <div class="job-info">
 
             📍 Remote<br>
-
             💰 Salary: ₹20,000 – ₹35,000<br>
-
             🎓 Qualification: Any Degree
 
         </div>
 
-        <span class="tag">
-            Remote
-        </span>
+        <span class="tag">Remote</span>
+        <span class="tag">Writing</span>
 
-        <span class="tag">
-            Writing
-        </span>
+        <a href="job-details.html"
+           class="apply-button">
 
-        <a href="#"
-           class="apply-button"
-           onclick="showMessage(event)">
-
-            Apply Now →
+            View Details →
 
         </a>
 
@@ -566,26 +514,18 @@ footer{
         <div class="job-info">
 
             📍 Bangalore<br>
-
             💰 Salary: ₹25,000 – ₹45,000<br>
-
             🎓 Qualification: Degree / Diploma
 
         </div>
 
-        <span class="tag">
-            IT
-        </span>
+        <span class="tag">IT</span>
+        <span class="tag">Web Development</span>
 
-        <span class="tag">
-            Web Development
-        </span>
+        <a href="job-details.html"
+           class="apply-button">
 
-        <a href="#"
-           class="apply-button"
-           onclick="showMessage(event)">
-
-            Apply Now →
+            View Details →
 
         </a>
 
@@ -610,26 +550,18 @@ footer{
         <div class="job-info">
 
             📍 Delhi<br>
-
             💰 Salary: ₹20,000 – ₹30,000<br>
-
             🎓 Qualification: Any Degree
 
         </div>
 
-        <span class="tag">
-            Private
-        </span>
+        <span class="tag">Private</span>
+        <span class="tag">Customer Support</span>
 
-        <span class="tag">
-            Customer Support
-        </span>
+        <a href="job-details.html"
+           class="apply-button">
 
-        <a href="#"
-           class="apply-button"
-           onclick="showMessage(event)">
-
-            Apply Now →
+            View Details →
 
         </a>
 
@@ -654,26 +586,18 @@ footer{
         <div class="job-info">
 
             📍 Remote<br>
-
             💰 Salary: ₹15,000 – ₹25,000<br>
-
             🎓 Qualification: Any Degree
 
         </div>
 
-        <span class="tag">
-            Remote
-        </span>
+        <span class="tag">Remote</span>
+        <span class="tag">Data Entry</span>
 
-        <span class="tag">
-            Data Entry
-        </span>
+        <a href="job-details.html"
+           class="apply-button">
 
-        <a href="#"
-           class="apply-button"
-           onclick="showMessage(event)">
-
-            Apply Now →
+            View Details →
 
         </a>
 
@@ -682,6 +606,8 @@ footer{
 
 </div>
 
+
+<!-- NO RESULTS -->
 
 <div class="no-results" id="noResults">
 
@@ -715,6 +641,8 @@ footer{
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
     <h3>💼 Guna Career Hub</h3>
@@ -730,50 +658,33 @@ footer{
 </footer>
 
 
+<!-- BOTTOM NAV -->
+
 <div class="bottom-nav">
 
     <a href="index.html">
-
         <span>🏠</span>
-
         Home
-
     </a>
-
 
     <a href="jobs.html">
-
         <span>💼</span>
-
         Jobs
-
     </a>
-
 
     <a href="resume.html">
-
         <span>📄</span>
-
         Resume
-
     </a>
-
 
     <a href="courses.html">
-
         <span>📚</span>
-
         Courses
-
     </a>
 
-
     <a href="tools.html">
-
         <span>🧮</span>
-
         Tools
-
     </a>
 
 </div>
@@ -781,9 +692,7 @@ footer{
 
 <script>
 
-/* =========================
-   JOB SEARCH
-========================= */
+/* JOB SEARCH AND FILTER */
 
 function filterJobs(){
 
@@ -836,49 +745,22 @@ function filterJobs(){
             matchesLocation
         ){
 
-            job.style.display="block";
+            job.style.display = "block";
 
             found++;
 
         }
         else{
 
-            job.style.display="none";
+            job.style.display = "none";
 
         }
 
     });
 
 
-    const noResults =
-        document.getElementById("noResults");
-
-
-    if(found === 0){
-
-        noResults.style.display="block";
-
-    }
-    else{
-
-        noResults.style.display="none";
-
-    }
-
-}
-
-
-/* =========================
-   APPLY MESSAGE
-========================= */
-
-function showMessage(event){
-
-    event.preventDefault();
-
-    alert(
-        "Application link will be added when the actual job opening is published."
-    );
+    document.getElementById("noResults").style.display =
+        found === 0 ? "block" : "none";
 
 }
 
