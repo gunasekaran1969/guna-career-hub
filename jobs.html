@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Guna Career Hub Jobs - Government, Private, IT and Remote Job Opportunities.">
+content="Guna Career Hub Jobs - Government, Private, IT, Remote, Freshers and Data Analyst Jobs.">
 
 <title>Jobs | Guna Career Hub</title>
 
@@ -80,6 +80,49 @@ header p{
     margin-top:8px;
 }
 
+/* CATEGORY SECTION */
+
+.category-section{
+    max-width:1100px;
+    margin:10px auto;
+    padding:15px;
+}
+
+.category-section h3{
+    text-align:center;
+    color:#123c8c;
+    margin-bottom:15px;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:10px;
+}
+
+.category-btn{
+    border:none;
+    background:white;
+    padding:14px 8px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
+    cursor:pointer;
+    color:#123c8c;
+    font-weight:bold;
+    font-size:13px;
+    transition:.2s;
+}
+
+.category-btn:hover{
+    background:#e3f2fd;
+    transform:translateY(-2px);
+}
+
+.category-btn.active{
+    background:#123c8c;
+    color:white;
+}
+
 /* SEARCH */
 
 .search-section{
@@ -122,7 +165,7 @@ header p{
     background:#1976d2;
 }
 
-/* JOB CARDS */
+/* JOBS */
 
 .jobs-container{
     max-width:1100px;
@@ -273,7 +316,7 @@ footer{
 
 /* MOBILE */
 
-@media(max-width:600px){
+@media(max-width:700px){
 
     .navbar{
         display:none;
@@ -281,6 +324,10 @@ footer{
 
     header h1{
         font-size:25px;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .jobs-container{
@@ -295,7 +342,6 @@ footer{
 </head>
 
 <body>
-
 
 <!-- HEADER -->
 
@@ -325,15 +371,64 @@ footer{
 </nav>
 
 
-<!-- PAGE TITLE -->
+<!-- TITLE -->
 
 <section class="page-title">
 
     <h2>💼 Find Your Next Job</h2>
 
     <p>
-        Explore government, private, IT and remote opportunities.
+        Explore jobs by category, skill and location.
     </p>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="category-section">
+
+    <h3>🔎 Browse Job Categories</h3>
+
+    <div class="categories">
+
+        <button
+            class="category-btn active"
+            onclick="selectCategory('all',this)">
+            🔎<br>All Jobs
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="selectCategory('government',this)">
+            🏛️<br>Government
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="selectCategory('private',this)">
+            🏢<br>Private
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="selectCategory('it',this)">
+            💻<br>IT Jobs
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="selectCategory('remote',this)">
+            🏠<br>Remote
+        </button>
+
+        <button
+            class="category-btn"
+            onclick="selectCategory('freshers',this)">
+            👨‍🎓<br>Freshers
+        </button>
+
+    </div>
 
 </section>
 
@@ -350,23 +445,27 @@ footer{
             placeholder="🔎 Search job title or skill..."
         >
 
-        <select id="jobType">
-
-            <option value="all">All Job Types</option>
-            <option value="government">Government</option>
-            <option value="private">Private</option>
-            <option value="remote">Remote</option>
-            <option value="it">IT</option>
-
-        </select>
-
         <select id="jobLocation">
 
-            <option value="all">All Locations</option>
-            <option value="chennai">Chennai</option>
-            <option value="bangalore">Bangalore</option>
-            <option value="delhi">Delhi</option>
-            <option value="remote">Remote</option>
+            <option value="all">
+                All Locations
+            </option>
+
+            <option value="chennai">
+                Chennai
+            </option>
+
+            <option value="bangalore">
+                Bangalore
+            </option>
+
+            <option value="delhi">
+                Delhi
+            </option>
+
+            <option value="remote">
+                Remote
+            </option>
 
         </select>
 
@@ -385,15 +484,15 @@ footer{
 
 <!-- JOB LIST -->
 
-<div class="jobs-container" id="jobsContainer">
+<div class="jobs-container">
 
 
     <!-- JOB 1 -->
 
     <div class="job-card"
-         data-type="government"
+         data-category="government"
          data-location="chennai"
-         data-search="government tnpsc assistant">
+         data-search="government tnpsc assistant fresher">
 
         <div class="job-icon">🏛️</div>
 
@@ -412,7 +511,7 @@ footer{
         </div>
 
         <span class="tag">Government</span>
-        <span class="tag">Full Time</span>
+        <span class="tag">Freshers</span>
 
         <a href="job-details.html"
            class="apply-button">
@@ -427,9 +526,9 @@ footer{
     <!-- JOB 2 -->
 
     <div class="job-card"
-         data-type="private"
+         data-category="data"
          data-location="chennai"
-         data-search="business analyst data analyst excel sql">
+         data-search="business analyst data analyst excel sql fresher">
 
         <div class="job-icon">📊</div>
 
@@ -447,8 +546,8 @@ footer{
 
         </div>
 
-        <span class="tag">Private</span>
         <span class="tag">Data</span>
+        <span class="tag">Freshers</span>
 
         <a href="job-details.html"
            class="apply-button">
@@ -463,9 +562,9 @@ footer{
     <!-- JOB 3 -->
 
     <div class="job-card"
-         data-type="remote"
+         data-category="remote"
          data-location="remote"
-         data-search="content writer writing remote">
+         data-search="content writer writing remote fresher">
 
         <div class="job-icon">✍️</div>
 
@@ -484,7 +583,7 @@ footer{
         </div>
 
         <span class="tag">Remote</span>
-        <span class="tag">Writing</span>
+        <span class="tag">Freshers</span>
 
         <a href="job-details.html"
            class="apply-button">
@@ -499,9 +598,9 @@ footer{
     <!-- JOB 4 -->
 
     <div class="job-card"
-         data-type="it"
+         data-category="it"
          data-location="bangalore"
-         data-search="web developer html css javascript">
+         data-search="web developer html css javascript fresher">
 
         <div class="job-icon">💻</div>
 
@@ -520,7 +619,7 @@ footer{
         </div>
 
         <span class="tag">IT</span>
-        <span class="tag">Web Development</span>
+        <span class="tag">Freshers</span>
 
         <a href="job-details.html"
            class="apply-button">
@@ -535,9 +634,9 @@ footer{
     <!-- JOB 5 -->
 
     <div class="job-card"
-         data-type="private"
+         data-category="private"
          data-location="delhi"
-         data-search="customer support executive communication">
+         data-search="customer support executive communication fresher">
 
         <div class="job-icon">🎧</div>
 
@@ -556,7 +655,7 @@ footer{
         </div>
 
         <span class="tag">Private</span>
-        <span class="tag">Customer Support</span>
+        <span class="tag">Freshers</span>
 
         <a href="job-details.html"
            class="apply-button">
@@ -571,9 +670,9 @@ footer{
     <!-- JOB 6 -->
 
     <div class="job-card"
-         data-type="remote"
+         data-category="remote"
          data-location="remote"
-         data-search="data entry excel remote">
+         data-search="data entry excel remote fresher">
 
         <div class="job-icon">⌨️</div>
 
@@ -592,7 +691,7 @@ footer{
         </div>
 
         <span class="tag">Remote</span>
-        <span class="tag">Data Entry</span>
+        <span class="tag">Freshers</span>
 
         <a href="job-details.html"
            class="apply-button">
@@ -615,7 +714,7 @@ footer{
 
     <br><br>
 
-    Try another keyword or job category.
+    Try another category, keyword or location.
 
 </div>
 
@@ -692,7 +791,30 @@ footer{
 
 <script>
 
-/* JOB SEARCH AND FILTER */
+let selectedCategory = "all";
+
+
+/* CATEGORY SELECTION */
+
+function selectCategory(category,button){
+
+    selectedCategory = category;
+
+    document.querySelectorAll(".category-btn")
+        .forEach(function(btn){
+
+            btn.classList.remove("active");
+
+        });
+
+    button.classList.add("active");
+
+    filterJobs();
+
+}
+
+
+/* SEARCH + FILTER */
 
 function filterJobs(){
 
@@ -701,9 +823,6 @@ function filterJobs(){
         .value
         .toLowerCase()
         .trim();
-
-    const type =
-        document.getElementById("jobType").value;
 
     const location =
         document.getElementById("jobLocation").value;
@@ -716,33 +835,70 @@ function filterJobs(){
 
     jobs.forEach(function(job){
 
-        const jobSearch =
-            job.dataset.search.toLowerCase();
-
-        const jobType =
-            job.dataset.type;
+        const category =
+            job.dataset.category;
 
         const jobLocation =
             job.dataset.location;
 
+        const jobSearch =
+            job.dataset.search.toLowerCase();
 
-        const matchesSearch =
+
+        /* CATEGORY */
+
+        let categoryMatch = false;
+
+        if(selectedCategory === "all"){
+
+            categoryMatch = true;
+
+        }
+
+        else if(selectedCategory === "freshers"){
+
+            categoryMatch =
+                jobSearch.includes("fresher");
+
+        }
+
+        else if(selectedCategory === "data"){
+
+            categoryMatch =
+                jobSearch.includes("business analyst") ||
+                jobSearch.includes("data analyst") ||
+                category === "data";
+
+        }
+
+        else{
+
+            categoryMatch =
+                category === selectedCategory;
+
+        }
+
+
+        /* SEARCH */
+
+        const searchMatch =
             search === "" ||
             jobSearch.includes(search);
 
-        const matchesType =
-            type === "all" ||
-            jobType === type;
 
-        const matchesLocation =
+        /* LOCATION */
+
+        const locationMatch =
             location === "all" ||
             jobLocation === location;
 
 
+        /* SHOW / HIDE */
+
         if(
-            matchesSearch &&
-            matchesType &&
-            matchesLocation
+            categoryMatch &&
+            searchMatch &&
+            locationMatch
         ){
 
             job.style.display = "block";
@@ -750,6 +906,7 @@ function filterJobs(){
             found++;
 
         }
+
         else{
 
             job.style.display = "none";
