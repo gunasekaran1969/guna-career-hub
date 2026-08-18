@@ -1,0 +1,461 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resume Builder | Guna Career Hub</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+    padding-bottom:75px;
+}
+
+header{
+    background:linear-gradient(135deg,#123c8c,#1976d2);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:15px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    background:#0b2d6b;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    padding:13px 12px;
+    font-size:14px;
+}
+
+.navbar a:hover{
+    background:#1976d2;
+}
+
+.page-title{
+    text-align:center;
+    padding:30px 15px 10px;
+}
+
+.page-title h2{
+    color:#123c8c;
+}
+
+.page-title p{
+    color:#666;
+    margin-top:8px;
+}
+
+.form-container{
+    max-width:800px;
+    margin:20px auto;
+    padding:20px;
+}
+
+.form-box{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.form-box h3{
+    color:#123c8c;
+    margin:20px 0 10px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:6px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.generate{
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    border:none;
+    border-radius:25px;
+    background:#123c8c;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.generate:hover{
+    background:#1976d2;
+}
+
+/* GENERATED RESUME */
+
+#resumeOutput{
+    display:none;
+    max-width:800px;
+    margin:30px auto;
+    background:white;
+    padding:35px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.resume-name{
+    color:#123c8c;
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.resume-contact{
+    color:#555;
+    margin-bottom:25px;
+}
+
+.resume-section{
+    margin-top:22px;
+}
+
+.resume-section h3{
+    color:#123c8c;
+    border-bottom:2px solid #123c8c;
+    padding-bottom:5px;
+    margin-bottom:10px;
+}
+
+.resume-section p{
+    line-height:1.6;
+    white-space:pre-line;
+}
+
+.print-button{
+    display:block;
+    margin:25px auto 0;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#198754;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:30px;
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-around;
+    background:#123c8c;
+    padding:10px 5px;
+    z-index:1000;
+}
+
+.bottom-nav a{
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    font-size:12px;
+}
+
+.bottom-nav span{
+    display:block;
+    font-size:20px;
+    margin-bottom:3px;
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        display:none;
+    }
+
+    header h1{
+        font-size:25px;
+    }
+
+    .form-container{
+        padding:15px;
+    }
+
+    #resumeOutput{
+        margin:20px 15px;
+        padding:20px;
+    }
+
+    .resume-name{
+        font-size:25px;
+    }
+}
+
+/* PRINT */
+@media print{
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    header,
+    .navbar,
+    .page-title,
+    .form-container,
+    footer,
+    .bottom-nav,
+    .print-button{
+        display:none;
+    }
+
+    #resumeOutput{
+        display:block !important;
+        box-shadow:none;
+        margin:0;
+        max-width:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💼 Guna Career Hub</h1>
+    <p>Create Your Professional Resume</p>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="courses.html">Courses</a>
+    <a href="exams.html">Exams</a>
+    <a href="resume.html">Resume</a>
+    <a href="quiz.html">Quiz</a>
+</nav>
+
+<section class="page-title">
+    <h2>📄 Resume Builder</h2>
+    <p>Enter your details and generate your resume.</p>
+</section>
+
+<div class="form-container">
+
+<div class="form-box">
+
+<h3>Personal Information</h3>
+
+<label>Full Name</label>
+<input type="text" id="name" placeholder="Enter your full name">
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+
+<label>Phone</label>
+<input type="text" id="phone" placeholder="Enter your phone number">
+
+<label>Location</label>
+<input type="text" id="location" placeholder="City, State">
+
+<h3>Career Objective</h3>
+
+<label>Objective</label>
+<textarea id="objective"
+placeholder="Write your career objective"></textarea>
+
+<h3>Education</h3>
+
+<label>Education Details</label>
+<textarea id="education"
+placeholder="Example: Bachelor of Commerce - ABC College - 2024"></textarea>
+
+<h3>Skills</h3>
+
+<label>Skills</label>
+<textarea id="skills"
+placeholder="Example: Excel, SQL, Communication, Data Analysis"></textarea>
+
+<h3>Work Experience</h3>
+
+<label>Experience</label>
+<textarea id="experience"
+placeholder="Company, designation, responsibilities and dates"></textarea>
+
+<button class="generate" onclick="generateResume()">
+    Generate Resume
+</button>
+
+</div>
+
+</div>
+
+<!-- GENERATED RESUME -->
+
+<div id="resumeOutput">
+
+<h1 class="resume-name" id="rName"></h1>
+
+<p class="resume-contact">
+    <span id="rEmail"></span> |
+    <span id="rPhone"></span> |
+    <span id="rLocation"></span>
+</p>
+
+<div class="resume-section">
+    <h3>Career Objective</h3>
+    <p id="rObjective"></p>
+</div>
+
+<div class="resume-section">
+    <h3>Education</h3>
+    <p id="rEducation"></p>
+</div>
+
+<div class="resume-section">
+    <h3>Skills</h3>
+    <p id="rSkills"></p>
+</div>
+
+<div class="resume-section">
+    <h3>Work Experience</h3>
+    <p id="rExperience"></p>
+</div>
+
+<button class="print-button" onclick="window.print()">
+    🖨️ Print / Save as PDF
+</button>
+
+</div>
+
+<footer>
+
+<h3>💼 Guna Career Hub</h3>
+
+<p>Learn • Prepare • Apply • Grow</p>
+
+<p>© 2026 Guna Career Hub</p>
+
+</footer>
+
+<div class="bottom-nav">
+
+<a href="index.html">
+<span>🏠</span>
+Home
+</a>
+
+<a href="jobs.html">
+<span>💼</span>
+Jobs
+</a>
+
+<a href="resume.html">
+<span>📄</span>
+Resume
+</a>
+
+<a href="courses.html">
+<span>📚</span>
+Courses
+</a>
+
+</div>
+
+<script>
+
+function generateResume(){
+
+    document.getElementById("rName").textContent =
+        document.getElementById("name").value;
+
+    document.getElementById("rEmail").textContent =
+        document.getElementById("email").value;
+
+    document.getElementById("rPhone").textContent =
+        document.getElementById("phone").value;
+
+    document.getElementById("rLocation").textContent =
+        document.getElementById("location").value;
+
+    document.getElementById("rObjective").textContent =
+        document.getElementById("objective").value;
+
+    document.getElementById("rEducation").textContent =
+        document.getElementById("education").value;
+
+    document.getElementById("rSkills").textContent =
+        document.getElementById("skills").value;
+
+    document.getElementById("rExperience").textContent =
+        document.getElementById("experience").value;
+
+    document.getElementById("resumeOutput").style.display = "block";
+
+    document.getElementById("resumeOutput").scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
+```
+
+### After committing
+
+Open:
+
+**Home → Resume**
+
+Enter some test information and tap **Generate Resume**.
+
+Then try **🖨️ Print / Save as PDF**.
+
+Once you've tested it, we'll improve the Resume Builder further with **photo, professional formatting, sections for projects/certificates, and a cleaner A4 resume layout**.
