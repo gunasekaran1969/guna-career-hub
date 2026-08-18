@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Guna Career Hub Job Details - Job description, qualification, salary, skills and application information.">
+
+<title>Job Details | Guna Career Hub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+    padding-bottom:75px;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#123c8c,#1976d2);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:15px;
+}
+
+/* NAVIGATION */
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    background:#0b2d6b;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    padding:13px 12px;
+    font-size:14px;
+}
+
+.navbar a:hover{
+    background:#1976d2;
+}
+
+/* MAIN */
+
+.main{
+    max-width:900px;
+    margin:30px auto;
+    padding:15px;
+}
+
+/* JOB HEADER */
+
+.job-header{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+.job-icon{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.job-header h2{
+    color:#123c8c;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.company{
+    font-size:18px;
+    font-weight:bold;
+    color:#555;
+}
+
+.location{
+    margin-top:10px;
+    color:#666;
+}
+
+/* TAGS */
+
+.tags{
+    margin-top:18px;
+}
+
+.tag{
+    display:inline-block;
+    background:#e3f2fd;
+    color:#123c8c;
+    padding:7px 13px;
+    border-radius:20px;
+    margin:4px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* INFORMATION */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.info-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.info-card strong{
+    display:block;
+    color:#123c8c;
+    margin-bottom:7px;
+}
+
+.info-card span{
+    color:#555;
+}
+
+/* SECTIONS */
+
+.section{
+    background:white;
+    margin-top:20px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.section h3{
+    color:#123c8c;
+    margin-bottom:12px;
+}
+
+.section p{
+    color:#555;
+    line-height:1.7;
+}
+
+.section ul{
+    padding-left:20px;
+    color:#555;
+    line-height:1.8;
+}
+
+/* APPLY */
+
+.apply-section{
+    background:linear-gradient(135deg,#123c8c,#1976d2);
+    color:white;
+    text-align:center;
+    margin-top:20px;
+    padding:30px;
+    border-radius:18px;
+}
+
+.apply-section h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.apply-section p{
+    margin-bottom:20px;
+}
+
+.apply-button{
+    display:inline-block;
+    background:white;
+    color:#123c8c;
+    padding:13px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.apply-button:hover{
+    background:#eaf3ff;
+}
+
+/* BACK BUTTON */
+
+.back-button{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    color:#123c8c;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:30px;
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-around;
+    background:#123c8c;
+    padding:10px 5px;
+    z-index:1000;
+    box-shadow:0 -3px 10px rgba(0,0,0,.2);
+}
+
+.bottom-nav a{
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    font-size:12px;
+}
+
+.bottom-nav span{
+    display:block;
+    font-size:20px;
+    margin-bottom:3px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .navbar{
+        display:none;
+    }
+
+    header h1{
+        font-size:25px;
+    }
+
+    .main{
+        padding:12px;
+        margin:20px auto;
+    }
+
+    .job-header{
+        padding:25px 15px;
+    }
+
+    .job-header h2{
+        font-size:25px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>💼 Guna Career Hub</h1>
+
+    <p>
+        Find Jobs • Build Skills • Grow Your Career
+    </p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <a href="jobs.html">Jobs</a>
+
+    <a href="courses.html">Courses</a>
+
+    <a href="exams.html">Exams</a>
+
+    <a href="resume.html">Resume</a>
+
+    <a href="quiz.html">Quiz</a>
+
+    <a href="tools.html">Tools</a>
+
+</nav>
+
+
+<main class="main">
+
+
+<!-- JOB HEADER -->
+
+<section class="job-header">
+
+    <div class="job-icon">
+        📊
+    </div>
+
+    <h2>
+        Junior Business Analyst
+    </h2>
+
+    <div class="company">
+        Private Company
+    </div>
+
+    <div class="location">
+        📍 Chennai, Tamil Nadu
+    </div>
+
+    <div class="tags">
+
+        <span class="tag">
+            Private
+        </span>
+
+        <span class="tag">
+            Full Time
+        </span>
+
+        <span class="tag">
+            Data Analytics
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- BASIC INFORMATION -->
+
+<div class="info-grid">
+
+    <div class="info-card">
+
+        <strong>💰 Salary</strong>
+
+        <span>
+            ₹30,000 – ₹50,000 per month
+        </span>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <strong>🎓 Qualification</strong>
+
+        <span>
+            Bachelor's Degree
+        </span>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <strong>💼 Job Type</strong>
+
+        <span>
+            Full Time
+        </span>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <strong>📍 Location</strong>
+
+        <span>
+            Chennai, Tamil Nadu
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- DESCRIPTION -->
+
+<section class="section">
+
+    <h3>
+        📋 Job Description
+    </h3>
+
+    <p>
+
+        The Junior Business Analyst will assist in analysing
+        business data, preparing reports and supporting
+        decision-making activities.
+
+        The role is suitable for candidates interested in
+        business analysis, data analysis and reporting.
+
+    </p>
+
+</section>
+
+
+<!-- RESPONSIBILITIES -->
+
+<section class="section">
+
+    <h3>
+        🛠️ Key Responsibilities
+    </h3>
+
+    <ul>
+
+        <li>Collect and analyse business data.</li>
+
+        <li>Prepare reports and dashboards.</li>
+
+        <li>Work with Excel and SQL data.</li>
+
+        <li>Identify trends and useful insights.</li>
+
+        <li>Support business decision-making.</li>
+
+        <li>Communicate findings to team members.</li>
+
+    </ul>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section class="section">
+
+    <h3>
+        ⭐ Required Skills
+    </h3>
+
+    <ul>
+
+        <li>Microsoft Excel</li>
+
+        <li>SQL</li>
+
+        <li>Data Analysis</li>
+
+        <li>Communication Skills</li>
+
+        <li>Problem Solving</li>
+
+        <li>Basic Business Analysis</li>
+
+    </ul>
+
+</section>
+
+
+<!-- APPLY -->
+
+<section class="apply-section">
+
+    <h3>
+        🚀 Interested in this Job?
+    </h3>
+
+    <p>
+        Check the official application information before applying.
+    </p>
+
+    <a href="#"
+       class="apply-button"
+       onclick="applyJob(event)">
+
+        Apply Now →
+
+    </a>
+
+</section>
+
+
+<a href="jobs.html" class="back-button">
+
+    ← Back to Jobs
+
+</a>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>💼 Guna Career Hub</h3>
+
+    <p>
+        Learn • Prepare • Apply • Grow
+    </p>
+
+    <p>
+        © 2026 Guna Career Hub
+    </p>
+
+</footer>
+
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+    <a href="index.html">
+
+        <span>🏠</span>
+        Home
+
+    </a>
+
+
+    <a href="jobs.html">
+
+        <span>💼</span>
+        Jobs
+
+    </a>
+
+
+    <a href="resume.html">
+
+        <span>📄</span>
+        Resume
+
+    </a>
+
+
+    <a href="courses.html">
+
+        <span>📚</span>
+        Courses
+
+    </a>
+
+
+    <a href="tools.html">
+
+        <span>🧮</span>
+        Tools
+
+    </a>
+
+</div>
+
+
+<script>
+
+function applyJob(event){
+
+    event.preventDefault();
+
+    alert(
+        "This is a demonstration job listing. An official application link will be added when a verified vacancy is published."
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
