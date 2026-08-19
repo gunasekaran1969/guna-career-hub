@@ -1,30 +1,383 @@
-<form action="https://formspree.io/f/mdenpvln" method="POST">
 
-  <h2>Job Application Form</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <label>Full Name</label>
-  <input type="text" name="name" required>
+<title>Jobs & Careers | Guna Career Hub</title>
 
-  <label>Email Address</label>
-  <input type="email" name="email" required>
+<style>
+* {
+    box-sizing: border-box;
+}
 
-  <label>Phone Number</label>
-  <input type="tel" name="phone" required>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
 
-  <label>Job Applying For</label>
-  <select name="job" required>
-    <option value="">Select Job</option>
-    <option value="Business Analyst">Business Analyst</option>
-    <option value="Content Writer">Content Writer</option>
-    <option value="Customer Support Executive">
-      Customer Support Executive
-    </option>
-    <option value="Data Analyst">Data Analyst</option>
-  </select>
+/* Header */
+header {
+    background: #1565c0;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-  <label>Cover Letter</label>
-  <textarea name="message" rows="6" required></textarea>
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
 
-  <button type="submit">Apply Now</button>
+header p {
+    margin: 8px 0 0;
+}
 
-</form>
+/* Navigation */
+nav {
+    background: #0d47a1;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Job Card */
+.job-card {
+    background: white;
+    margin-bottom: 20px;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+
+.job-card h2 {
+    color: #1565c0;
+    margin-top: 0;
+}
+
+.job-info {
+    line-height: 1.8;
+}
+
+.apply-btn {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.apply-btn:hover {
+    background: #0d47a1;
+}
+
+/* Application Section */
+#application {
+    display: none;
+    background: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+
+#application h2 {
+    color: #1565c0;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background: #1b5e20;
+}
+
+.close-btn {
+    background: #777;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* Footer */
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .container {
+        width: 94%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Guna Career Hub</h1>
+    <p>Find Your Career. Build Your Future.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="news.html">News</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>Latest Job Opportunities</h2>
+
+    <!-- Job 1 -->
+    <div class="job-card">
+        <h2>Business Analyst</h2>
+
+        <div class="job-info">
+            <strong>Company:</strong> Guna Career Hub<br>
+            <strong>Location:</strong> Remote / India<br>
+            <strong>Job Type:</strong> Full Time<br>
+            <strong>Experience:</strong> 0–3 Years
+        </div>
+
+        <p>
+            We are looking for candidates with analytical,
+            Excel and SQL skills.
+        </p>
+
+        <button class="apply-btn"
+        onclick="openApplication('Business Analyst')">
+            Apply Now
+        </button>
+    </div>
+
+
+    <!-- Job 2 -->
+    <div class="job-card">
+        <h2>Content Writer</h2>
+
+        <div class="job-info">
+            <strong>Company:</strong> Guna Career Hub<br>
+            <strong>Location:</strong> Remote / India<br>
+            <strong>Job Type:</strong> Full Time<br>
+            <strong>Experience:</strong> 0–2 Years
+        </div>
+
+        <p>
+            Candidates with good English writing and
+            communication skills are encouraged to apply.
+        </p>
+
+        <button class="apply-btn"
+        onclick="openApplication('Content Writer')">
+            Apply Now
+        </button>
+    </div>
+
+
+    <!-- Job 3 -->
+    <div class="job-card">
+        <h2>Customer Support Executive</h2>
+
+        <div class="job-info">
+            <strong>Company:</strong> Guna Career Hub<br>
+            <strong>Location:</strong> Remote / India<br>
+            <strong>Job Type:</strong> Full Time<br>
+            <strong>Experience:</strong> 0–2 Years
+        </div>
+
+        <p>
+            Good communication and customer service
+            skills are preferred.
+        </p>
+
+        <button class="apply-btn"
+        onclick="openApplication('Customer Support Executive')">
+            Apply Now
+        </button>
+    </div>
+
+
+    <!-- Application Form -->
+
+    <section id="application">
+
+        <h2>Job Application Form</h2>
+
+        <p>
+            Apply for: <strong id="selectedJob"></strong>
+        </p>
+
+        <form action="https://formspree.io/f/mdenpvln"
+              method="POST">
+
+            <input type="hidden"
+                   name="job_applied_for"
+                   id="jobField">
+
+            <label>Full Name</label>
+            <input type="text"
+                   name="name"
+                   placeholder="Enter your full name"
+                   required>
+
+            <label>Email Address</label>
+            <input type="email"
+                   name="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <label>Phone Number</label>
+            <input type="tel"
+                   name="phone"
+                   placeholder="Enter your phone number"
+                   required>
+
+            <label>Highest Qualification</label>
+            <input type="text"
+                   name="qualification"
+                   placeholder="Example: Bachelor's Degree"
+                   required>
+
+            <label>Experience</label>
+            <select name="experience" required>
+                <option value="">Select Experience</option>
+                <option value="Fresher">Fresher</option>
+                <option value="1-2 Years">1–2 Years</option>
+                <option value="3-5 Years">3–5 Years</option>
+                <option value="5+ Years">5+ Years</option>
+            </select>
+
+            <label>Skills</label>
+            <textarea
+                name="skills"
+                rows="4"
+                placeholder="Enter your skills"
+                required></textarea>
+
+            <label>Cover Letter</label>
+            <textarea
+                name="cover_letter"
+                rows="5"
+                placeholder="Write a short cover letter"></textarea>
+
+            <button type="submit" class="submit-btn">
+                Submit Application
+            </button>
+
+            <button type="button"
+                    class="close-btn"
+                    onclick="closeApplication()">
+                Cancel
+            </button>
+
+        </form>
+
+    </section>
+
+</div>
+
+
+<footer>
+    <p>© 2026 Guna Career Hub. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+
+function openApplication(jobName) {
+
+    document.getElementById("application").style.display = "block";
+
+    document.getElementById("selectedJob").textContent = jobName;
+
+    document.getElementById("jobField").value = jobName;
+
+    document.getElementById("application")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
+
+
+function closeApplication() {
+
+    document.getElementById("application").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>
