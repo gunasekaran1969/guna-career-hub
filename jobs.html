@@ -7,7 +7,6 @@
 <title>Jobs & Careers | Guna Career Hub</title>
 
 <style>
-
 * {
     box-sizing: border-box;
 }
@@ -20,7 +19,6 @@ body {
 }
 
 /* HEADER */
-
 header {
     background: #1565c0;
     color: white;
@@ -35,11 +33,9 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    font-size: 16px;
 }
 
 /* NAVIGATION */
-
 nav {
     background: #0d47a1;
     text-align: center;
@@ -49,7 +45,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 9px;
     font-weight: bold;
 }
 
@@ -57,22 +53,20 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* MAIN CONTAINER */
-
+/* MAIN */
 .container {
     width: 92%;
     max-width: 1000px;
     margin: 30px auto;
 }
 
-.container > h2 {
+.page-title {
     text-align: center;
     color: #1565c0;
     margin-bottom: 25px;
 }
 
 /* JOB CARDS */
-
 .job-card {
     background: white;
     padding: 23px;
@@ -110,7 +104,6 @@ nav a:hover {
 }
 
 /* APPLICATION FORM */
-
 #application {
     display: none;
     background: white;
@@ -127,16 +120,36 @@ nav a:hover {
 
 .selected-job {
     background: #e3f2fd;
-    padding: 12px;
+    padding: 14px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
+/* GOOGLE DRIVE INSTRUCTIONS */
+.drive-box {
+    background: #fff8e1;
+    border-left: 5px solid #f9a825;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.drive-box strong {
+    color: #e65100;
+}
+
+.drive-box ol {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+/* FORM */
 label {
     display: block;
     margin-top: 17px;
     font-weight: bold;
-}
+}i
 
 input,
 select,
@@ -153,23 +166,14 @@ textarea {
     resize: vertical;
 }
 
-/* FILE UPLOAD */
-
-input[type="file"] {
-    background: #fafafa;
-    cursor: pointer;
-    padding: 12px;
-}
-
-.file-note {
-    display: block;
-    margin-top: 6px;
-    color: #666;
-    font-size: 13px;
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1565c0;
 }
 
 /* BUTTONS */
-
 .submit-btn {
     background: #2e7d32;
     color: white;
@@ -183,6 +187,11 @@ input[type="file"] {
 
 .submit-btn:hover {
     background: #1b5e20;
+}
+
+.submit-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
 }
 
 .close-btn {
@@ -200,8 +209,33 @@ input[type="file"] {
     background: #555;
 }
 
-/* FOOTER */
+/* SUCCESS MESSAGE */
+#successMessage {
+    display: none;
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+}
 
+#successMessage h3 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+/* ERROR MESSAGE */
+#errorMessage {
+    display: none;
+    background: #ffebee;
+    border-left: 5px solid #c62828;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: #b71c1c;
+}
+
+/* FOOTER */
 footer {
     background: #0d47a1;
     color: white;
@@ -211,7 +245,6 @@ footer {
 }
 
 /* MOBILE */
-
 @media (max-width: 600px) {
 
     header h1 {
@@ -220,7 +253,7 @@ footer {
 
     nav a {
         display: inline-block;
-        margin: 5px 7px;
+        margin: 5px 6px;
     }
 
     .container {
@@ -236,42 +269,33 @@ footer {
         margin-left: 0;
         margin-top: 10px;
     }
-}
 
+    .submit-btn,
+    .close-btn {
+        width: 100%;
+    }
+}
 </style>
 </head>
 
-
 <body>
-
 
 <!-- HEADER -->
 
 <header>
-
     <h1>Guna Career Hub</h1>
-
-    <p>
-        Find Your Career. Build Your Future.
-    </p>
-
+    <p>Find Your Career. Build Your Future.</p>
 </header>
 
 
 <!-- NAVIGATION -->
 
 <nav>
-
     <a href="index.html">Home</a>
-
     <a href="jobs.html">Jobs</a>
-
     <a href="news.html">News</a>
-
     <a href="education.html">Education</a>
-
     <a href="contact.html">Contact</a>
-
 </nav>
 
 
@@ -279,7 +303,9 @@ footer {
 
 <div class="container">
 
-    <h2>Latest Job Opportunities</h2>
+    <h2 class="page-title">
+        Latest Job Opportunities
+    </h2>
 
 
     <!-- JOB 1 -->
@@ -289,22 +315,10 @@ footer {
         <h2>Business Analyst</h2>
 
         <div class="job-info">
-
-            <strong>Company:</strong>
-            Guna Career Hub
-            <br>
-
-            <strong>Location:</strong>
-            Remote / India
-            <br>
-
-            <strong>Job Type:</strong>
-            Full Time
-            <br>
-
-            <strong>Experience:</strong>
-            0–3 Years
-
+            <strong>Company:</strong> Guna Career Hub<br>
+            <strong>Location:</strong> Remote / India<br>
+            <strong>Job Type:</strong> Full Time<br>
+            <strong>Experience:</strong> 0–3 Years
         </div>
 
         <p>
@@ -330,22 +344,10 @@ footer {
         <h2>Content Writer</h2>
 
         <div class="job-info">
-
-            <strong>Company:</strong>
-            Guna Career Hub
-            <br>
-
-            <strong>Location:</strong>
-            Remote / India
-            <br>
-
-            <strong>Job Type:</strong>
-            Full Time
-            <br>
-
-            <strong>Experience:</strong>
-            0–2 Years
-
+            <strong>Company:</strong> Guna Career Hub<br>
+            <strong>Location:</strong> Remote / India<br>
+            <strong>Job Type:</strong> Full Time<br>
+            <strong>Experience:</strong> 0–2 Years
         </div>
 
         <p>
@@ -371,22 +373,10 @@ footer {
         <h2>Customer Support Executive</h2>
 
         <div class="job-info">
-
-            <strong>Company:</strong>
-            Guna Career Hub
-            <br>
-
-            <strong>Location:</strong>
-            Remote / India
-            <br>
-
-            <strong>Job Type:</strong>
-            Full Time
-            <br>
-
-            <strong>Experience:</strong>
-            0–2 Years
-
+            <strong>Company:</strong> Guna Career Hub<br>
+            <strong>Location:</strong> Remote / India<br>
+            <strong>Job Type:</strong> Full Time<br>
+            <strong>Experience:</strong> 0–2 Years
         </div>
 
         <p>
@@ -411,11 +401,39 @@ footer {
 
         <h2>Job Application Form</h2>
 
-
         <div class="selected-job">
-
             Applying for:
             <strong id="selectedJob"></strong>
+        </div>
+
+
+        <!-- GOOGLE DRIVE INSTRUCTIONS -->
+
+        <div class="drive-box">
+
+            <strong>📄 Resume / CV Instructions</strong>
+
+            <p>
+                Please upload your resume to Google Drive
+                before submitting this application.
+            </p>
+
+            <ol>
+                <li>Open Google Drive.</li>
+                <li>Upload your Resume / CV.</li>
+                <li>Right-click the file and select
+                    <strong>Share</strong>.
+                </li>
+                <li>Change General Access to
+                    <strong>Anyone with the link</strong>.
+                </li>
+                <li>Copy the link and paste it below.</li>
+            </ol>
+
+            <p>
+                Accepted resume formats:
+                <strong>PDF, DOC, DOCX</strong>
+            </p>
 
         </div>
 
@@ -423,12 +441,12 @@ footer {
         <!-- FORMSPREE FORM -->
 
         <form
+            id="jobForm"
             action="https://formspree.io/f/mdenpvln"
-            method="POST"
-            enctype="multipart/form-data">
+            method="POST">
 
 
-            <!-- JOB -->
+            <!-- JOB FIELD -->
 
             <input
                 type="hidden"
@@ -439,7 +457,7 @@ footer {
             <!-- NAME -->
 
             <label for="name">
-                Full Name
+                Full Name *
             </label>
 
             <input
@@ -453,7 +471,7 @@ footer {
             <!-- EMAIL -->
 
             <label for="email">
-                Email Address
+                Email Address *
             </label>
 
             <input
@@ -467,7 +485,7 @@ footer {
             <!-- PHONE -->
 
             <label for="phone">
-                Phone Number
+                Phone Number *
             </label>
 
             <input
@@ -481,7 +499,7 @@ footer {
             <!-- QUALIFICATION -->
 
             <label for="qualification">
-                Highest Qualification
+                Highest Qualification *
             </label>
 
             <input
@@ -495,7 +513,7 @@ footer {
             <!-- EXPERIENCE -->
 
             <label for="experience">
-                Experience
+                Experience *
             </label>
 
             <select
@@ -529,7 +547,7 @@ footer {
             <!-- SKILLS -->
 
             <label for="skills">
-                Skills
+                Skills *
             </label>
 
             <textarea
@@ -540,22 +558,23 @@ footer {
                 required></textarea>
 
 
-            <!-- RESUME UPLOAD -->
+            <!-- RESUME LINK -->
 
             <label for="resume">
-                Upload Resume / CV
+                Resume / CV Google Drive Link *
             </label>
 
             <input
-                type="file"
+                type="url"
                 id="resume"
-                name="resume"
-                accept=".pdf,.doc,.docx"
+                name="resume_link"
+                placeholder="https://drive.google.com/..."
                 required>
 
-            <span class="file-note">
-                Accepted formats: PDF, DOC, DOCX
-            </span>
+            <small>
+                Make sure your Google Drive file is set to
+                "Anyone with the link".
+            </small>
 
 
             <!-- COVER LETTER -->
@@ -568,14 +587,16 @@ footer {
                 id="cover_letter"
                 name="cover_letter"
                 rows="6"
-                placeholder="Write a short cover letter"></textarea>
+                placeholder="Write a short cover letter">
+            </textarea>
 
 
             <!-- SUBMIT -->
 
             <button
                 type="submit"
-                class="submit-btn">
+                class="submit-btn"
+                id="submitButton">
 
                 Submit Application
 
@@ -593,8 +614,42 @@ footer {
 
             </button>
 
-
         </form>
+
+
+        <!-- SUCCESS -->
+
+        <div id="successMessage">
+
+            <h3>✅ Application Submitted Successfully!</h3>
+
+            <p>
+                Thank you for applying through Guna Career Hub.
+            </p>
+
+            <p>
+                Your application has been received successfully.
+            </p>
+
+            <button
+                class="apply-btn"
+                onclick="newApplication()">
+
+                Apply for Another Job
+
+            </button>
+
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div id="errorMessage">
+
+            ❌ There was a problem submitting your application.
+            Please check your internet connection and try again.
+
+        </div>
 
     </section>
 
@@ -612,9 +667,9 @@ footer {
 </footer>
 
 
-<!-- JAVASCRIPT -->
-
 <script>
+
+/* OPEN APPLICATION */
 
 function openApplication(jobName) {
 
@@ -624,6 +679,12 @@ function openApplication(jobName) {
 
     document.getElementById("jobField").value = jobName;
 
+    document.getElementById("successMessage").style.display = "none";
+
+    document.getElementById("errorMessage").style.display = "none";
+
+    document.getElementById("jobForm").style.display = "block";
+
     document.getElementById("application").scrollIntoView({
         behavior: "smooth"
     });
@@ -631,14 +692,106 @@ function openApplication(jobName) {
 }
 
 
+/* CLOSE APPLICATION */
+
 function closeApplication() {
 
     document.getElementById("application").style.display = "none";
 
 }
 
-</script>
 
+/* NEW APPLICATION */
+
+function newApplication() {
+
+    document.getElementById("jobForm").reset();
+
+    document.getElementById("jobForm").style.display = "block";
+
+    document.getElementById("successMessage").style.display = "none";
+
+}
+
+
+/* FORMSPREE SUBMISSION */
+
+document.getElementById("jobForm").addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const form = this;
+
+    const submitButton =
+        document.getElementById("submitButton");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+    const errorMessage =
+        document.getElementById("errorMessage");
+
+
+    submitButton.disabled = true;
+
+    submitButton.textContent = "Submitting...";
+
+    successMessage.style.display = "none";
+
+    errorMessage.style.display = "none";
+
+
+    try {
+
+        const response = await fetch(
+            form.action,
+            {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    "Accept": "application/json"
+                }
+            }
+        );
+
+
+        if (response.ok) {
+
+            form.style.display = "none";
+
+            successMessage.style.display = "block";
+
+            successMessage.scrollIntoView({
+                behavior: "smooth"
+            });
+
+            form.reset();
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "Submit Application";
+
+        } else {
+
+            throw new Error("Submission failed");
+
+        }
+
+    } catch (error) {
+
+        errorMessage.style.display = "block";
+
+        submitButton.disabled = false;
+
+        submitButton.textContent =
+            "Submit Application";
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
