@@ -1,7 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,49 +9,607 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    background:#f4f7fb;
-    color:#222;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
 }
 
 /* HEADER */
 
-.header{
-    background:linear-gradient(135deg,#123c8c,#1976d2);
-    color:white;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+header {
+    background: #1565c0;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.header h1{
-    font-size:24px;
+header h1 {
+    margin: 0;
 }
 
-.header p{
-    font-size:13px;
-    margin-top:5px;
+header p {
+    margin: 7px 0 0;
 }
 
-.home-button{
-    background:white;
-    color:#123c8c;
-    padding:10px 16px;
-    border-radius:20px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:13px;
+/* NAVIGATION */
+
+nav {
+    background: #0d47a1;
+    padding: 13px;
+    text-align: center;
 }
 
-/* LAYOUT */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
 
-.dashboard{
-    max-width:120
+/* MAIN */
+
+.container {
+    width: 94%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* DASHBOARD TITLE */
+
+.dashboard-title {
+    color: #1565c0;
+}
+
+/* STATISTICS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1565c0;
+    margin: 10px 0 0;
+}
+
+/* APPLICATION AREA */
+
+.application-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.application-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 280px;
+    font-size: 15px;
+}
+
+/* TABLE */
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+th {
+    background: #1565c0;
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f5f9ff;
+}
+
+/* STATUS */
+
+.status {
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.new {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.shortlisted {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.rejected {
+    background: #ffebee;
+    color: #c62828;
+}
+
+/* BUTTONS */
+
+.view-btn {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #0d47a1;
+}
+
+/* EMPTY MESSAGE */
+
+.empty-message {
+    text-align: center;
+    padding: 35px;
+    color: #777;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 40px;
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>Guna Career Hub</h1>
+
+    <p>Administration Dashboard</p>
+
+</header>
+
+
+<nav>
+
+    <a href="index.html">Website</a>
+
+    <a href="jobs.html">Jobs</a>
+
+    <a href="admin.html">Admin Dashboard</a>
+
+</nav>
+
+
+<div class="container">
+
+    <h2 class="dashboard-title">
+        Application Dashboard
+    </h2>
+
+
+    <!-- STATISTICS -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <h3>Total Applications</h3>
+
+            <p id="totalApplications">0</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>New Applications</h3>
+
+            <p id="newApplications">0</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Shortlisted</h3>
+
+            <p id="shortlistedApplications">0</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Rejected</h3>
+
+            <p id="rejectedApplications">0</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- APPLICATIONS -->
+
+    <div class="application-box">
+
+        <div class="application-header">
+
+            <h2>Job Applications</h2>
+
+            <input
+                type="search"
+                id="searchBox"
+                class="search-box"
+                placeholder="Search applicants...">
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Job</th>
+
+                        <th>Experience</th>
+
+                        <th>Resume</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="applicationTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div
+            id="emptyMessage"
+            class="empty-message">
+
+            No applications are currently connected
+            to this dashboard.
+
+            <br><br>
+
+            Formspree applications are currently
+            received through your Formspree account.
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 Guna Career Hub. Admin Panel
+    </p>
+
+</footer>
+
+
+<script>
+
+/*
+    DEMO DATA AREA
+
+    This dashboard is ready for application data.
+
+    We are NOT putting your Formspree API key
+    into this public HTML file.
+*/
+
+
+const applications = [
+
+    /*
+    Example:
+
+    {
+        name: "Test Applicant",
+        email: "test@example.com",
+        phone: "9876543210",
+        job: "Business Analyst",
+        experience: "Fresher",
+        resume: "https://drive.google.com/...",
+        status: "New"
+    }
+
+    Add real application data only
+    after we create a secure backend.
+    */
+
+];
+
+
+/* DISPLAY APPLICATIONS */
+
+function displayApplications(data) {
+
+    const table =
+        document.getElementById("applicationTable");
+
+    table.innerHTML = "";
+
+
+    if (data.length === 0) {
+
+        document.getElementById(
+            "emptyMessage"
+        ).style.display = "block";
+
+        return;
+
+    }
+
+
+    document.getElementById(
+        "emptyMessage"
+    ).style.display = "none";
+
+
+    data.forEach(function(app) {
+
+        const row =
+            document.createElement("tr");
+
+
+        let statusClass = "new";
+
+
+        if (app.status === "Shortlisted") {
+
+            statusClass = "shortlisted";
+
+        }
+
+
+        if (app.status === "Rejected") {
+
+            statusClass = "rejected";
+
+        }
+
+
+        row.innerHTML = `
+
+            <td>${app.name}</td>
+
+            <td>${app.email}</td>
+
+            <td>${app.phone}</td>
+
+            <td>${app.job}</td>
+
+            <td>${app.experience}</td>
+
+            <td>
+                <a
+                    href="${app.resume}"
+                    target="_blank">
+
+                    View Resume
+
+                </a>
+            </td>
+
+            <td>
+
+                <span
+                    class="status ${statusClass}">
+
+                    ${app.status}
+
+                </span>
+
+            </td>
+
+            <td>
+
+                <button
+                    class="view-btn"
+                    onclick="viewApplicant('${app.name}')">
+
+                    View
+
+                </button>
+
+            </td>
+
+        `;
+
+
+        table.appendChild(row);
+
+    });
+
+}
+
+
+/* STATISTICS */
+
+function updateStatistics(data) {
+
+    document.getElementById(
+        "totalApplications"
+    ).textContent = data.length;
+
+
+    document.getElementById(
+        "newApplications"
+    ).textContent =
+        data.filter(
+            app => app.status === "New"
+        ).length;
+
+
+    document.getElementById(
+        "shortlistedApplications"
+    ).textContent =
+        data.filter(
+            app => app.status === "Shortlisted"
+        ).length;
+
+
+    document.getElementById(
+        "rejectedApplications"
+    ).textContent =
+        data.filter(
+            app => app.status === "Rejected"
+        ).length;
+
+}
+
+
+/* VIEW APPLICANT */
+
+function viewApplicant(name) {
+
+    alert(
+        "Applicant: " + name +
+        "\n\nApplicant details will be displayed here."
+    );
+
+}
+
+
+/* SEARCH */
+
+document
+.getElementById("searchBox")
+.addEventListener("input", function() {
+
+    const search =
+        this.value.toLowerCase();
+
+
+    const filtered =
+        applications.filter(function(app) {
+
+            return (
+
+                app.name.toLowerCase()
+                .includes(search)
+
+                ||
+
+                app.email.toLowerCase()
+                .includes(search)
+
+                ||
+
+                app.job.toLowerCase()
+                .includes(search)
+
+            );
+
+        });
+
+
+    displayApplications(filtered);
+
+});
+
+
+/* INITIAL LOAD */
+
+displayApplications(applications);
+
+updateStatistics(applications);
+
+</script>
+
+</body>
+</html>
+```
