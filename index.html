@@ -1,37 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="Guna Career Hub - Jobs, Courses, Government Exams, Resume Builder, Career Quiz and Career Tools.">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Guna Career Hub | Jobs, Courses & Career Guidance</title>
+
+<meta name="description"
+      content="Guna Career Hub - Find jobs, courses, government exams, career guidance, resume tools and career opportunities.">
 
 <style>
 
 /* =========================
-   BASIC
+   GENERAL
 ========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f4f7fb;
-    color:#222;
-    padding-bottom:75px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
 }
 
 
@@ -39,20 +36,21 @@ body{
    HEADER
 ========================= */
 
-header{
-    background:linear-gradient(135deg,#123c8c,#1976d2);
-    color:white;
-    text-align:center;
-    padding:30px 15px;
+header {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
 }
 
-header h1{
-    font-size:30px;
-    margin-bottom:8px;
+header h1 {
+    margin: 0;
+    font-size: 34px;
 }
 
-header p{
-    font-size:15px;
+header p {
+    margin: 10px 0 0;
+    font-size: 17px;
 }
 
 
@@ -60,22 +58,26 @@ header p{
    NAVIGATION
 ========================= */
 
-.navbar{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    background:#0b2d6b;
+nav {
+    background: #0d47a1;
+    text-align: center;
+    padding: 14px 8px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar a{
-    color:white;
-    text-decoration:none;
-    padding:13px 12px;
-    font-size:14px;
+nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 9px;
+    font-weight: bold;
+    font-size: 15px;
 }
 
-.navbar a:hover{
-    background:#1976d2;
+nav a:hover {
+    text-decoration: underline;
 }
 
 
@@ -83,327 +85,234 @@ header p{
    HERO
 ========================= */
 
-.hero{
-    text-align:center;
-    padding:55px 20px;
-    color:white;
-    background:linear-gradient(135deg,#1976d2,#42a5f5);
+.hero {
+    background: white;
+    text-align: center;
+    padding: 55px 20px;
 }
 
-.hero-content{
-    max-width:800px;
-    margin:auto;
+.hero h2 {
+    color: #1565c0;
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
-.hero-badge{
-    display:inline-block;
-    background:rgba(255,255,255,0.18);
-    padding:8px 16px;
-    border-radius:25px;
-    font-size:14px;
-    margin-bottom:15px;
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 17px;
 }
 
-.hero h2{
-    font-size:34px;
-    margin-bottom:15px;
+.hero-buttons {
+    margin-top: 25px;
 }
 
-.hero p{
-    max-width:700px;
-    margin:auto;
-    line-height:1.6;
-    font-size:17px;
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 7px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-top:25px;
+.primary-btn {
+    background: #1565c0;
+    color: white;
 }
 
-.hero-button{
-    display:inline-block;
-    padding:13px 28px;
-    background:white;
-    color:#123c8c;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
+.primary-btn:hover {
+    background: #0d47a1;
 }
 
-.hero-button:hover{
-    transform:translateY(-2px);
+.secondary-btn {
+    border: 2px solid #1565c0;
+    color: #1565c0;
+    background: white;
 }
 
-.hero-button.secondary{
-    background:#123c8c;
-    color:white;
+.secondary-btn:hover {
+    background: #e3f2fd;
 }
 
 
 /* =========================
-   SEARCH
+   MAIN CONTAINER
 ========================= */
 
-.search-section{
-    max-width:800px;
-    margin:-25px auto 20px;
-    padding:0 20px;
-    position:relative;
-    z-index:10;
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
 }
 
-.search-box{
-    background:white;
-    padding:15px;
-    border-radius:18px;
-    box-shadow:0 6px 20px rgba(0,0,0,.15);
-    display:flex;
-    gap:10px;
-}
-
-.search-box input{
-    flex:1;
-    padding:13px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    font-size:15px;
-    outline:none;
-}
-
-.search-box button{
-    padding:13px 20px;
-    border:none;
-    border-radius:10px;
-    background:#123c8c;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.search-box button:hover{
-    background:#1976d2;
+.section-title {
+    text-align: center;
+    color: #1565c0;
+    margin-bottom: 25px;
 }
 
 
 /* =========================
-   SECTION TITLE
+   FEATURE CARDS
 ========================= */
 
-.section-title{
-    text-align:center;
-    padding:30px 15px 10px;
+.features {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 20px;
 }
 
-.section-title h2{
-    color:#123c8c;
+.card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+    transition: 0.2s;
 }
 
-.section-title p{
-    margin-top:8px;
-    color:#666;
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #1565c0;
+    margin: 10px 0;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1565c0;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 
 /* =========================
-   CARDS
+   CAREER TOOLS
 ========================= */
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
+.tools-section {
+    background: white;
+    padding: 35px 20px;
+    margin-top: 35px;
+    border-radius: 12px;
 }
 
-.card{
-    display:block;
-    background:white;
-    padding:25px 20px;
-    border-radius:18px;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
-    text-align:center;
-    text-decoration:none;
-    color:#333;
-    transition:.25s;
-    border:1px solid #e5e7eb;
+.tools {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 15px;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 22px rgba(0,0,0,.18);
+.tool {
+    background: #f4f7fb;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.icon{
-    font-size:42px;
-    margin-bottom:12px;
+.tool h3 {
+    color: #1565c0;
 }
 
-.card h3{
-    color:#123c8c;
-    margin-bottom:10px;
-    font-size:21px;
-}
-
-.card p{
-    color:#666;
-    line-height:1.5;
-    font-size:14px;
+.tool a {
+    color: #1565c0;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 
 /* =========================
-   QUICK ACTIONS
+   JOB CTA
 ========================= */
 
-.quick-section{
-    max-width:1100px;
-    margin:20px auto;
-    padding:20px;
+.job-section {
+    background: #e3f2fd;
+    margin-top: 35px;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
 }
 
-.quick-box{
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.10);
+.job-section h2 {
+    color: #0d47a1;
 }
 
-.quick-box h2{
-    color:#123c8c;
-    text-align:center;
-    margin-bottom:20px;
+.job-section p {
+    line-height: 1.6;
 }
 
-.quick-actions{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
+.job-button {
+    display: inline-block;
+    background: #1565c0;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.quick-action{
-    padding:15px;
-    background:#eef5ff;
-    border-radius:12px;
-    text-align:center;
-    text-decoration:none;
-    color:#123c8c;
-    font-weight:bold;
-}
-
-.quick-action:hover{
-    background:#dbeafe;
+.job-button:hover {
+    background: #0d47a1;
 }
 
 
 /* =========================
-   LATEST UPDATES
+   ADMIN SECTION
 ========================= */
 
-.updates{
-    max-width:1100px;
-    margin:20px auto;
-    padding:20px;
+.admin-section {
+    background: white;
+    margin-top: 35px;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
 }
 
-.updates-box{
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.10);
+.admin-section h2 {
+    color: #1565c0;
 }
 
-.updates-box h2{
-    color:#123c8c;
-    margin-bottom:15px;
+.admin-section p {
+    line-height: 1.6;
+    color: #555;
 }
 
-.update{
-    padding:13px 0;
-    border-bottom:1px solid #eee;
+.admin-button {
+    display: inline-block;
+    background: #424242;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.update:last-child{
-    border-bottom:none;
-}
-
-.update strong{
-    color:#123c8c;
-}
-
-.update span{
-    color:#666;
-    font-size:14px;
-}
-
-
-/* =========================
-   POPULAR SKILLS
-========================= */
-
-.skills{
-    max-width:1100px;
-    margin:20px auto;
-    padding:20px;
-}
-
-.skills-box{
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.10);
-    text-align:center;
-}
-
-.skills-box h2{
-    color:#123c8c;
-    margin-bottom:18px;
-}
-
-.skill{
-    display:inline-block;
-    padding:9px 15px;
-    margin:5px;
-    background:#e3f2fd;
-    color:#123c8c;
-    border-radius:20px;
-    font-size:14px;
-    font-weight:bold;
-}
-
-
-/* =========================
-   FEATURED
-========================= */
-
-.featured{
-    max-width:1100px;
-    margin:20px auto;
-    padding:20px;
-}
-
-.featured-box{
-    background:linear-gradient(135deg,#123c8c,#1976d2);
-    color:white;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-.featured-box h2{
-    margin-bottom:12px;
-}
-
-.featured-box p{
-    line-height:1.6;
-    max-width:750px;
-    margin:auto;
+.admin-button:hover {
+    background: #212121;
 }
 
 
@@ -411,47 +320,30 @@ header p{
    FOOTER
 ========================= */
 
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-    margin-top:30px;
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 45px;
 }
 
-footer h3{
-    margin-bottom:8px;
+footer p {
+    margin: 6px 0;
 }
 
-
-/* =========================
-   MOBILE BOTTOM NAV
-========================= */
-
-.bottom-nav{
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    display:flex;
-    justify-content:space-around;
-    background:#123c8c;
-    padding:9px 5px;
-    z-index:1000;
-    box-shadow:0 -3px 10px rgba(0,0,0,.2);
+.footer-links {
+    margin-top: 12px;
 }
 
-.bottom-nav a{
-    color:white;
-    text-decoration:none;
-    text-align:center;
-    font-size:11px;
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
 }
 
-.bottom-nav span{
-    display:block;
-    font-size:19px;
-    margin-bottom:2px;
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
 
@@ -459,75 +351,56 @@ footer h3{
    MOBILE
 ========================= */
 
-@media(max-width:700px){
+@media (max-width: 800px) {
 
-    header h1{
-        font-size:25px;
+    .features {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .navbar{
-        display:none;
-    }
-
-    .hero{
-        padding:42px 18px;
-    }
-
-    .hero h2{
-        font-size:27px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .container{
-        grid-template-columns:1fr;
-        padding:15px;
-    }
-
-    .search-section{
-        padding:0 15px;
-    }
-
-    .search-box{
-        flex-direction:column;
-    }
-
-    .search-box button{
-        width:100%;
-    }
-
-    .quick-section,
-    .updates,
-    .skills,
-    .featured{
-        padding:15px;
-    }
-
-    .quick-actions{
-        grid-template-columns:1fr 1fr;
+    .tools {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
 
 
-/* =========================
-   SMALL PHONES
-========================= */
+@media (max-width: 600px) {
 
-@media(max-width:400px){
-
-    .quick-actions{
-        grid-template-columns:1fr;
+    header h1 {
+        font-size: 27px;
     }
 
-    .hero-buttons{
-        flex-direction:column;
+    header p {
+        font-size: 15px;
     }
 
-    .hero-button{
-        width:100%;
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 5px 6px;
+    }
+
+    .hero {
+        padding: 40px 18px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .features,
+    .tools {
+        grid-template-columns: 1fr;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 250px;
     }
 
 }
@@ -536,531 +409,433 @@ footer h3{
 
 </head>
 
+
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-    <h1>💼 Guna Career Hub</h1>
+    <h1>Guna Career Hub</h1>
 
     <p>
-        Jobs • Courses • Exams • Skills • Career Tools
+        Find Your Career. Build Your Future.
     </p>
 
 </header>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-<nav class="navbar">
+<nav>
 
-    <a href="index.html">Home</a>
+    <a href="index.html">
+        Home
+    </a>
 
-    <a href="jobs.html">Jobs</a>
+    <a href="jobs.html">
+        Jobs
+    </a>
 
-    <a href="courses.html">Courses</a>
+    <a href="news.html">
+        News
+    </a>
 
-    <a href="exams.html">Exams</a>
+    <a href="education.html">
+        Education
+    </a>
 
-    <a href="resume.html">Resume</a>
+    <a href="courses.html">
+        Courses
+    </a>
 
-    <a href="quiz.html">Quiz</a>
+    <a href="exams.html">
+        Government Exams
+    </a>
 
-    <a href="tools.html">Tools</a>
+    <a href="contact.html">
+        Contact
+    </a>
+
+    <!-- ADMIN DASHBOARD -->
+
+    <a href="admin.html">
+        Admin Dashboard
+    </a>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-    <div class="hero-content">
-
-        <div class="hero-badge">
-            🚀 Your Career Starts Here
-        </div>
-
-        <h2>
-            Build Your Career With Confidence
-        </h2>
-
-        <p>
-            Find jobs, learn valuable skills, prepare for government exams,
-            create your resume and discover useful career opportunities.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="jobs.html" class="hero-button">
-                💼 Find Jobs
-            </a>
-
-            <a href="resume.html" class="hero-button secondary">
-                📄 Create Resume
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SEARCH -->
-
-<section class="search-section">
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="careerSearch"
-            placeholder="🔎 Search Jobs, Courses, Exams, Resume..."
-        >
-
-        <button onclick="searchCareer()">
-            Search
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- MAIN CARDS -->
-
-<section class="section-title">
-
     <h2>
-        Explore Guna Career Hub
+        Your Career Starts Here
     </h2>
 
     <p>
-        Choose what you want to explore
+        Guna Career Hub brings together
+        job opportunities, courses,
+        government exams, career guidance
+        and useful career tools in one place.
     </p>
+
+
+    <div class="hero-buttons">
+
+        <a
+            href="jobs.html"
+            class="primary-btn">
+
+            Explore Jobs
+
+        </a>
+
+
+        <a
+            href="courses.html"
+            class="secondary-btn">
+
+            Explore Courses
+
+        </a>
+
+    </div>
 
 </section>
 
 
+<!-- =========================
+     MAIN FEATURES
+========================= -->
+
 <div class="container">
 
+    <h2 class="section-title">
+        Explore Guna Career Hub
+    </h2>
 
-    <a href="jobs.html" class="card">
 
-        <div class="icon">💼</div>
+    <div class="features">
 
-        <h3>Jobs</h3>
+
+        <!-- JOBS -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                💼
+            </div>
+
+            <h3>
+                Jobs
+            </h3>
+
+            <p>
+                Find job opportunities and
+                submit applications online.
+            </p>
+
+            <a href="jobs.html">
+                View Jobs →
+            </a>
+
+        </div>
+
+
+        <!-- COURSES -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🎓
+            </div>
+
+            <h3>
+                Courses
+            </h3>
+
+            <p>
+                Discover useful courses and
+                skills for your career.
+            </p>
+
+            <a href="courses.html">
+                View Courses →
+            </a>
+
+        </div>
+
+
+        <!-- GOVERNMENT EXAMS -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                📝
+            </div>
+
+            <h3>
+                Government Exams
+            </h3>
+
+            <p>
+                Find information about
+                government examination opportunities.
+            </p>
+
+            <a href="exams.html">
+                View Exams →
+            </a>
+
+        </div>
+
+
+        <!-- NEWS -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                📰
+            </div>
+
+            <h3>
+                Career News
+            </h3>
+
+            <p>
+                Stay updated with important
+                education and career news.
+            </p>
+
+            <a href="news.html">
+                Read News →
+            </a>
+
+        </div>
+
+
+        <!-- CAREER QUIZ -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🧠
+            </div>
+
+            <h3>
+                Career Quiz
+            </h3>
+
+            <p>
+                Explore your interests and
+                discover suitable career options.
+            </p>
+
+            <a href="quiz.html">
+                Take Quiz →
+            </a>
+
+        </div>
+
+
+        <!-- RESUME BUILDER -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                📄
+            </div>
+
+            <h3>
+                Resume Builder
+            </h3>
+
+            <p>
+                Create a professional resume
+                for your next job application.
+            </p>
+
+            <a href="resume.html">
+                Build Resume →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CAREER TOOLS
+    ========================= -->
+
+    <div class="tools-section">
+
+        <h2 class="section-title">
+            Career Tools
+        </h2>
+
+
+        <div class="tools">
+
+
+            <div class="tool">
+
+                <h3>
+                    📊 Data Skills
+                </h3>
+
+                <p>
+                    Learn useful skills such as
+                    Excel and SQL.
+                </p>
+
+                <a href="tools.html">
+                    Explore
+                </a>
+
+            </div>
+
+
+            <div class="tool">
+
+                <h3>
+                    🧾 Resume Tips
+                </h3>
+
+                <p>
+                    Improve your resume and
+                    job application skills.
+                </p>
+
+                <a href="resume.html">
+                    Explore
+                </a>
+
+            </div>
+
+
+            <div class="tool">
+
+                <h3>
+                    🎯 Career Guidance
+                </h3>
+
+                <p>
+                    Get useful information to
+                    plan your career.
+                </p>
+
+                <a href="guidance.html">
+                    Explore
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JOB CTA
+    ========================= -->
+
+    <div class="job-section">
+
+        <h2>
+            Looking for a Job?
+        </h2>
 
         <p>
-            Explore government, private and remote
-            job opportunities.
+            Explore available opportunities
+            and submit your application through
+            Guna Career Hub.
         </p>
 
-    </a>
+        <a
+            href="jobs.html"
+            class="job-button">
+
+            Find Jobs & Apply
+
+        </a>
+
+    </div>
 
 
-    <a href="courses.html" class="card">
+    <!-- =========================
+         ADMIN
+    ========================= -->
 
-        <div class="icon">📚</div>
+    <div class="admin-section">
 
-        <h3>Courses</h3>
+        <h2>
+            Administration
+        </h2>
 
         <p>
-            Learn SQL, Excel, AI, Data Analytics,
-            Web Development and more.
+            Authorized administrators can access
+            the Guna Career Hub application dashboard.
         </p>
 
-    </a>
+        <a
+            href="admin.html"
+            class="admin-button">
 
+            Admin Dashboard
 
-    <a href="exams.html" class="card">
+        </a>
 
-        <div class="icon">📝</div>
-
-        <h3>Government Exams</h3>
-
-        <p>
-            Explore TNPSC, SSC, Banking, Railway
-            and other competitive exams.
-        </p>
-
-    </a>
-
-
-    <a href="resume.html" class="card">
-
-        <div class="icon">📄</div>
-
-        <h3>Resume Builder</h3>
-
-        <p>
-            Create a professional resume
-            for your next job application.
-        </p>
-
-    </a>
-
-
-    <a href="quiz.html" class="card">
-
-        <div class="icon">🧠</div>
-
-        <h3>Career Quiz</h3>
-
-        <p>
-            Test your knowledge with career,
-            aptitude and technical quizzes.
-        </p>
-
-    </a>
-
-
-    <a href="tools.html" class="card">
-
-        <div class="icon">🧮</div>
-
-        <h3>Career Tools</h3>
-
-        <p>
-            Use useful calculators and tools
-            for your career planning.
-        </p>
-
-    </a>
-
+    </div>
 
 </div>
 
 
-<!-- QUICK ACTIONS -->
-
-<section class="quick-section">
-
-    <div class="quick-box">
-
-        <h2>⚡ Quick Actions</h2>
-
-        <div class="quick-actions">
-
-            <a href="jobs.html" class="quick-action">
-                💼 Find Jobs
-            </a>
-
-            <a href="courses.html" class="quick-action">
-                📚 Learn Skills
-            </a>
-
-            <a href="resume.html" class="quick-action">
-                📄 Build Resume
-            </a>
-
-            <a href="quiz.html" class="quick-action">
-                🧠 Take Quiz
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- LATEST UPDATES -->
-
-<section class="updates">
-
-    <div class="updates-box">
-
-        <h2>
-            📢 Career Updates
-        </h2>
-
-        <div class="update">
-
-            <strong>💼 Jobs</strong><br>
-
-            <span>
-                Explore new government, private and remote opportunities.
-            </span>
-
-        </div>
-
-
-        <div class="update">
-
-            <strong>📚 Skills</strong><br>
-
-            <span>
-                SQL, Excel, AI and Data Analytics are valuable modern skills.
-            </span>
-
-        </div>
-
-
-        <div class="update">
-
-            <strong>📝 Exams</strong><br>
-
-            <span>
-                Check our Exams section for competitive examination information.
-            </span>
-
-        </div>
-
-
-        <div class="update">
-
-            <strong>📄 Resume</strong><br>
-
-            <span>
-                Create and print your professional resume using our Resume Builder.
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- POPULAR SKILLS -->
-
-<section class="skills">
-
-    <div class="skills-box">
-
-        <h2>
-            ⭐ Popular Career Skills
-        </h2>
-
-        <span class="skill">SQL</span>
-
-        <span class="skill">Excel</span>
-
-        <span class="skill">Data Analytics</span>
-
-        <span class="skill">Artificial Intelligence</span>
-
-        <span class="skill">Python</span>
-
-        <span class="skill">Communication</span>
-
-        <span class="skill">Web Development</span>
-
-        <span class="skill">Digital Marketing</span>
-
-    </div>
-
-</section>
-
-
-<!-- FEATURED -->
-
-<section class="featured">
-
-    <div class="featured-box">
-
-        <h2>
-            🌟 Start Your Career Journey
-        </h2>
-
-        <p>
-            Whether you are a student, job seeker or professional,
-            Guna Career Hub helps you discover useful career information,
-            improve your skills and prepare for your next opportunity.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <h3>
-        💼 Guna Career Hub
-    </h3>
-
     <p>
-        Learn • Prepare • Apply • Grow
+        © 2026 Guna Career Hub.
+        All Rights Reserved.
     </p>
 
-    <p>
-        © 2026 Guna Career Hub. All Rights Reserved.
-    </p>
+
+    <div class="footer-links">
+
+        <a href="jobs.html">
+            Jobs
+        </a>
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+        <a href="exams.html">
+            Exams
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
 
 </footer>
 
 
-<!-- BOTTOM NAVIGATION -->
-
-<div class="bottom-nav">
-
-    <a href="index.html">
-
-        <span>🏠</span>
-
-        Home
-
-    </a>
-
-
-    <a href="jobs.html">
-
-        <span>💼</span>
-
-        Jobs
-
-    </a>
-
-
-    <a href="resume.html">
-
-        <span>📄</span>
-
-        Resume
-
-    </a>
-
-
-    <a href="courses.html">
-
-        <span>📚</span>
-
-        Courses
-
-    </a>
-
-
-    <a href="tools.html">
-
-        <span>🧮</span>
-
-        Tools
-
-    </a>
-
-</div>
-
-
-<script>
-
-/* =========================
-   SEARCH FUNCTION
-========================= */
-
-function searchCareer(){
-
-    let search =
-        document.getElementById("careerSearch")
-        .value
-        .toLowerCase()
-        .trim();
-
-    if(search === ""){
-        alert("Please enter something to search.");
-        return;
-    }
-
-
-    if(
-        search.includes("job") ||
-        search.includes("jobs") ||
-        search.includes("work")
-    ){
-
-        window.location.href="jobs.html";
-
-    }
-
-    else if(
-        search.includes("course") ||
-        search.includes("learn") ||
-        search.includes("skill") ||
-        search.includes("sql") ||
-        search.includes("excel") ||
-        search.includes("python") ||
-        search.includes("ai")
-    ){
-
-        window.location.href="courses.html";
-
-    }
-
-    else if(
-        search.includes("exam") ||
-        search.includes("tnpsc") ||
-        search.includes("ssc") ||
-        search.includes("railway") ||
-        search.includes("bank")
-    ){
-
-        window.location.href="exams.html";
-
-    }
-
-    else if(
-        search.includes("resume") ||
-        search.includes("cv")
-    ){
-
-        window.location.href="resume.html";
-
-    }
-
-    else if(
-        search.includes("quiz") ||
-        search.includes("test")
-    ){
-
-        window.location.href="quiz.html";
-
-    }
-
-    else if(
-        search.includes("tool") ||
-        search.includes("calculator") ||
-        search.includes("percentage") ||
-        search.includes("salary") ||
-        search.includes("age") ||
-        search.includes("cgpa")
-    ){
-
-        window.location.href="tools.html";
-
-    }
-
-    else{
-
-        alert(
-            "No matching section found. Try Jobs, Courses, Exams, Resume, Quiz or Tools."
-        );
-
-    }
-
-}
-
-
-/* ENTER KEY SEARCH */
-
-document.getElementById("careerSearch")
-.addEventListener("keypress",function(event){
-
-    if(event.key === "Enter"){
-
-        searchCareer();
-
-    }
-
-});
-
-</script>
-
-
 </body>
+
 </html>
+```
